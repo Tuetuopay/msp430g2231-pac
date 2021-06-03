@@ -1,0 +1,18 @@
+[package]
+name = "msp430g2231-pac"
+version = "0.1.0"
+authors = ["Tuetuopay <tuetuopay@me.com>"]
+description = "Peripheral access API for MSP430G2231 microcontroller"
+keywords = ["no-std", "msp430", "ti", "launchpad"]
+license = "MIT"
+edition = "2018"
+
+[dependencies]
+bare-metal = "0.2"
+msp430 = "0.2"
+msp430-atomic = "0.1"
+msp430-rt = { version = "0.2", optional = true }
+vcell = "0.1"
+
+[features]
+rt = ["msp430-rt/device"]
