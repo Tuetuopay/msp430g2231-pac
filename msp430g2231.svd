@@ -1499,16 +1499,52 @@
           <resetMask>255</resetMask>
           <fields>
             <field>
-              <name>ADC10AE0</name>
-              <description>ADC10 Analog Enable 0 register</description>
+              <name>A0</name>
+              <description>ADC10 analog enable, input A0</description>
               <bitOffset>0</bitOffset>
-              <bitWidth>8</bitWidth>
-              <writeConstraint>
-                <range>
-                  <minimum>0</minimum>
-                  <maximum>255</maximum>
-                </range>
-              </writeConstraint>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A1</name>
+              <description>ADC10 analog enable, input A1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A2</name>
+              <description>ADC10 analog enable, input A2</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A3</name>
+              <description>ADC10 analog enable, input A3</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A4</name>
+              <description>ADC10 analog enable, input A4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A5</name>
+              <description>ADC10 analog enable, input A5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A6</name>
+              <description>ADC10 analog enable, input A6</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A7</name>
+              <description>ADC10 analog enable, input A7</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
             </field>
           </fields>
         </register>
@@ -1603,24 +1639,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>ADC10SHT</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>ADC10SHT_0</name>
+                  <name>MUL_4</name>
                   <description>4 x ADC10CLKs</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10SHT_1</name>
+                  <name>MUL_8</name>
                   <description>8 x ADC10CLKs</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10SHT_2</name>
+                  <name>MUL_16</name>
                   <description>16 x ADC10CLKs</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10SHT_3</name>
-                  <description>64 x ADC10CLKs</description>
+                  <name>MUL_32</name>
+                  <description>32 x ADC10CLKs</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -1632,44 +1670,46 @@
               <bitWidth>3</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>SREF</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>SREF_0</name>
+                  <name>VCC_VSS</name>
                   <description>VR+ = AVCC and VR- = AVSS</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SREF_1</name>
+                  <name>VREF_VSS</name>
                   <description>VR+ = VREF+ and VR- = AVSS</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SREF_2</name>
-                  <description>VR+ = VEREF+ and VR- = AVSS</description>
+                  <name>VEREF_VSS</name>
+                  <description>VR+ = VeREF+ and VR- = AVSS. Devices with VeREF+ pin only.</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SREF_3</name>
-                  <description>VR+ = VEREF+ and VR- = AVSS</description>
+                  <name>VEREF_BUF_VSS</name>
+                  <description>VR+ = Buffered VeREF+ and VR- = AVSS. Devices with VeREF+ pin only.</description>
                   <value>3</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SREF_4</name>
-                  <description>VR+ = AVCC and VR- = VREF-/VEREF-</description>
+                  <name>VCC_VREF_VEREF</name>
+                  <description>VR+ = AVCC and VR- = VREF-/VeREF-. Devices with VeREF+ pin only.</description>
                   <value>4</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SREF_5</name>
-                  <description>VR+ = VREF+ and VR- = VREF-/VEREF-</description>
+                  <name>VREF_VREF_VEREF</name>
+                  <description>VR+ = VREF+ and VR- = VREF/VeREF-. Devices with VeREF- pin only.</description>
                   <value>5</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SREF_6</name>
-                  <description>VR+ = VEREF+ and VR- = VREF-/VEREF-</description>
+                  <name>VEREF_VREF_VEREF</name>
+                  <description>VR+ = VeREF+ and VR- = VREF/VeREF-. Devices with VeREF+/- pin only.</description>
                   <value>6</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SREF_7</name>
-                  <description>VR+ = VEREF+ and VR- = VREF-/VEREF-</description>
+                  <name>VEREF_BUF_VREF_VEREF</name>
+                  <description>VR+ = Buffered VeREF+ and VR- = VREF/VeREF-. Devices with VeREF+/- pin only.</description>
                   <value>7</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -1697,23 +1737,25 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>CONSEQ</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>CONSEQ_0</name>
+                  <name>SINGLE</name>
                   <description>Single channel single conversion</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CONSEQ_1</name>
+                  <name>SEQUENCE</name>
                   <description>Sequence of channels</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CONSEQ_2</name>
+                  <name>SINGLE_REPEAT</name>
                   <description>Repeat single channel</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CONSEQ_3</name>
+                  <name>SEQUENCE_REPEAT</name>
                   <description>Repeat sequence of channels</description>
                   <value>3</value>
                 </enumeratedValue>
@@ -1726,23 +1768,25 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>ADC10SSEL</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>ADC10SSEL_0</name>
+                  <name>ADC10OSC</name>
                   <description>ADC10OSC</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10SSEL_1</name>
+                  <name>ACLK</name>
                   <description>ACLK</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10SSEL_2</name>
+                  <name>MCLK</name>
                   <description>MCLK</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10SSEL_3</name>
+                  <name>SMCLK</name>
                   <description>SMCLK</description>
                   <value>3</value>
                 </enumeratedValue>
@@ -1755,44 +1799,46 @@
               <bitWidth>3</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>ADC10DIV</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>ADC10DIV_0</name>
-                  <description>ADC10 Clock Divider Select 0</description>
+                  <name>DIV_1</name>
+                  <description>/1</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10DIV_1</name>
-                  <description>ADC10 Clock Divider Select 1</description>
+                  <name>DIV_2</name>
+                  <description>/2</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10DIV_2</name>
-                  <description>ADC10 Clock Divider Select 2</description>
+                  <name>DIV_3</name>
+                  <description>/3</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10DIV_3</name>
-                  <description>ADC10 Clock Divider Select 3</description>
+                  <name>DIV_4</name>
+                  <description>/4</description>
                   <value>3</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10DIV_4</name>
-                  <description>ADC10 Clock Divider Select 4</description>
+                  <name>DIV_5</name>
+                  <description>/5</description>
                   <value>4</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10DIV_5</name>
-                  <description>ADC10 Clock Divider Select 5</description>
+                  <name>DIV_6</name>
+                  <description>/6</description>
                   <value>5</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10DIV_6</name>
-                  <description>ADC10 Clock Divider Select 6</description>
+                  <name>DIV_7</name>
+                  <description>/7</description>
                   <value>6</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ADC10DIV_7</name>
-                  <description>ADC10 Clock Divider Select 7</description>
+                  <name>DIV_8</name>
+                  <description>/8</description>
                   <value>7</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -1818,24 +1864,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>SHS</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>SHS_0</name>
-                  <description>ADC10SC</description>
+                  <name>ADC10SC</name>
+                  <description>ADC10SC bit</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SHS_1</name>
-                  <description>TA3 OUT1</description>
+                  <name>TIMER_A_OUT_1</name>
+                  <description>Timer_A.OUT1</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SHS_2</name>
-                  <description>TA3 OUT0</description>
+                  <name>TIMER_A_OUT_0</name>
+                  <description>Timer_A.OUT0</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>SHS_3</name>
-                  <description>TA3 OUT2</description>
+                  <name>TIMER_A_OUT_2</name>
+                  <description>Timer_A.OUT2 (Timer_A.OUT1 on MSP430F20x0, MSP430G2x31, and MSP430G2x30 devices</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -1847,84 +1895,71 @@
               <bitWidth>4</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>INCH</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>INCH_0</name>
-                  <description>Selects Channel 0</description>
+                  <name>A0</name>
+                  <description>A0</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_1</name>
-                  <description>Selects Channel 1</description>
+                  <name>A1</name>
+                  <description>A1</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_2</name>
-                  <description>Selects Channel 2</description>
+                  <name>A2</name>
+                  <description>A2</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_3</name>
-                  <description>Selects Channel 3</description>
+                  <name>A3</name>
+                  <description>A3</description>
                   <value>3</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_4</name>
-                  <description>Selects Channel 4</description>
+                  <name>A4</name>
+                  <description>A4</description>
                   <value>4</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_5</name>
-                  <description>Selects Channel 5</description>
+                  <name>A5</name>
+                  <description>A5</description>
                   <value>5</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_6</name>
-                  <description>Selects Channel 6</description>
+                  <name>A6</name>
+                  <description>A6</description>
                   <value>6</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_7</name>
-                  <description>Selects Channel 7</description>
+                  <name>A7</name>
+                  <description>A7</description>
                   <value>7</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_8</name>
-                  <description>Selects Channel 8</description>
+                  <name>VEREF_P</name>
+                  <description>VeREF+</description>
                   <value>8</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_9</name>
-                  <description>Selects Channel 9</description>
+                  <name>VREF_VEREF_N</name>
+                  <description>VREF-/VeREF-</description>
                   <value>9</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_10</name>
-                  <description>Selects Channel 10</description>
+                  <name>TEMP</name>
+                  <description>Temperature sensor</description>
                   <value>10</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_11</name>
-                  <description>Selects Channel 11</description>
+                  <name>VCC_VSS_2</name>
+                  <description>(VCC - VSS) / 2</description>
                   <value>11</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>INCH_12</name>
-                  <description>Selects Channel 12</description>
-                  <value>12</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INCH_13</name>
-                  <description>Selects Channel 13</description>
-                  <value>13</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INCH_14</name>
-                  <description>Selects Channel 14</description>
-                  <value>14</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>INCH_15</name>
-                  <description>Selects Channel 15</description>
+                  <name>A12</name>
+                  <description>A15</description>
                   <value>15</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3129,24 +3164,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>MC</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>MC_0</name>
-                  <description>Timer A mode control: 0 - Stop</description>
+                  <name>STOP</name>
+                  <description>Stop mode: the timer is halted</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>MC_1</name>
-                  <description>Timer A mode control: 1 - Up to CCR0</description>
+                  <name>UP</name>
+                  <description>Up mode: the timer counts up to TACCR0</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>MC_2</name>
-                  <description>Timer A mode control: 2 - Continous up</description>
+                  <name>CONTINUOUS</name>
+                  <description>Continous mode: the timer counts up to 0xFFFF</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>MC_3</name>
-                  <description>Timer A mode control: 3 - Up/Down</description>
+                  <name>UP_DOWN</name>
+                  <description>Up/down mode: the timer counts up to TACCR0 then down to 0x0000</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3158,24 +3195,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>ID</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>ID_0</name>
-                  <description>Timer A input divider: 0 - /1</description>
+                  <name>DIV_1</name>
+                  <description>/1</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ID_1</name>
-                  <description>Timer A input divider: 1 - /2</description>
+                  <name>DIV_2</name>
+                  <description>/2</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ID_2</name>
-                  <description>Timer A input divider: 2 - /4</description>
+                  <name>DIV_4</name>
+                  <description>/4</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>ID_3</name>
-                  <description>Timer A input divider: 3 - /8</description>
+                  <name>DIV_8</name>
+                  <description>/8</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3187,24 +3226,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>TASSEL</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>TASSEL_0</name>
-                  <description>Timer A clock source select: 0 - TACLK</description>
+                  <name>TACLK</name>
+                  <description>TACLK</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>TASSEL_1</name>
-                  <description>Timer A clock source select: 1 - ACLK</description>
+                  <name>ACLK</name>
+                  <description>ACLK</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>TASSEL_2</name>
-                  <description>Timer A clock source select: 2 - SMCLK</description>
+                  <name>SMCLK</name>
+                  <description>SMCLK</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>TASSEL_3</name>
-                  <description>Timer A clock source select: 3 - INCLK</description>
+                  <name>INCLK</name>
+                  <description>INCLK (device specific, often assigned to the inverted TBCLK)</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3260,44 +3301,46 @@
               <bitWidth>3</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>OUTMOD</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>OUTMOD_0</name>
-                  <description>PWM output mode: 0 - output only</description>
+                  <name>OUT</name>
+                  <description>OUT bit value</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_1</name>
-                  <description>PWM output mode: 1 - set</description>
+                  <name>SET</name>
+                  <description>Set</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_2</name>
-                  <description>PWM output mode: 2 - PWM toggle/reset</description>
+                  <name>TOGGLE_RESET</name>
+                  <description>Toggle/reset</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_3</name>
-                  <description>PWM output mode: 3 - PWM set/reset</description>
+                  <name>SET_RESET</name>
+                  <description>Set/reset</description>
                   <value>3</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_4</name>
-                  <description>PWM output mode: 4 - toggle</description>
+                  <name>TOGGLE</name>
+                  <description>Toggle</description>
                   <value>4</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_5</name>
-                  <description>PWM output mode: 5 - Reset</description>
+                  <name>RESET</name>
+                  <description>Reset</description>
                   <value>5</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_6</name>
-                  <description>PWM output mode: 6 - PWM toggle/set</description>
+                  <name>TOGGLE_SET</name>
+                  <description>Toggle/set</description>
                   <value>6</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_7</name>
-                  <description>PWM output mode: 7 - PWM reset/set</description>
+                  <name>RESET_SET</name>
+                  <description>Reset/set</description>
                   <value>7</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3330,24 +3373,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>CCIS</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>CCIS_0</name>
-                  <description>Capture input select: 0 - CCIxA</description>
+                  <name>CCI0A</name>
+                  <description>CCI0A</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CCIS_1</name>
-                  <description>Capture input select: 1 - CCIxB</description>
+                  <name>CCI0B</name>
+                  <description>CCI0B</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CCIS_2</name>
-                  <description>Capture input select: 2 - GND</description>
+                  <name>GND</name>
+                  <description>GND</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CCIS_3</name>
-                  <description>Capture input select: 3 - Vcc</description>
+                  <name>VCC</name>
+                  <description>VCC</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3359,24 +3404,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>CM</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>CM_0</name>
-                  <description>Capture mode: 0 - disabled</description>
+                  <name>NONE</name>
+                  <description>No capture</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CM_1</name>
-                  <description>Capture mode: 1 - pos. edge</description>
+                  <name>RISING</name>
+                  <description>Capture on rising edge</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CM_2</name>
-                  <description>Capture mode: 1 - neg. edge</description>
+                  <name>FALLING</name>
+                  <description>Capture on falling edge</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CM_3</name>
-                  <description>Capture mode: 1 - both edges</description>
+                  <name>BOTH</name>
+                  <description>Capture on both rising and falling edges</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3432,44 +3479,46 @@
               <bitWidth>3</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>OUTMOD</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>OUTMOD_0</name>
-                  <description>PWM output mode: 0 - output only</description>
+                  <name>OUT</name>
+                  <description>OUT bit value</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_1</name>
-                  <description>PWM output mode: 1 - set</description>
+                  <name>SET</name>
+                  <description>Set</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_2</name>
-                  <description>PWM output mode: 2 - PWM toggle/reset</description>
+                  <name>TOGGLE_RESET</name>
+                  <description>Toggle/reset</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_3</name>
-                  <description>PWM output mode: 3 - PWM set/reset</description>
+                  <name>SET_RESET</name>
+                  <description>Set/reset</description>
                   <value>3</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_4</name>
-                  <description>PWM output mode: 4 - toggle</description>
+                  <name>TOGGLE</name>
+                  <description>Toggle</description>
                   <value>4</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_5</name>
-                  <description>PWM output mode: 5 - Reset</description>
+                  <name>RESET</name>
+                  <description>Reset</description>
                   <value>5</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_6</name>
-                  <description>PWM output mode: 6 - PWM toggle/set</description>
+                  <name>TOGGLE_SET</name>
+                  <description>Toggle/set</description>
                   <value>6</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>OUTMOD_7</name>
-                  <description>PWM output mode: 7 - PWM reset/set</description>
+                  <name>RESET_SET</name>
+                  <description>Reset/set</description>
                   <value>7</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3502,24 +3551,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>CCIS</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>CCIS_0</name>
-                  <description>Capture input select: 0 - CCIxA</description>
+                  <name>CCI0A</name>
+                  <description>CCI0A</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CCIS_1</name>
-                  <description>Capture input select: 1 - CCIxB</description>
+                  <name>CCI0B</name>
+                  <description>CCI0B</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CCIS_2</name>
-                  <description>Capture input select: 2 - GND</description>
+                  <name>GND</name>
+                  <description>GND</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CCIS_3</name>
-                  <description>Capture input select: 3 - Vcc</description>
+                  <name>VCC</name>
+                  <description>VCC</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -3531,24 +3582,26 @@
               <bitWidth>2</bitWidth>
               <access>read-write</access>
               <enumeratedValues>
+                <name>CM</name>
+                <usage>read-write</usage>
                 <enumeratedValue>
-                  <name>CM_0</name>
-                  <description>Capture mode: 0 - disabled</description>
+                  <name>NONE</name>
+                  <description>No capture</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CM_1</name>
-                  <description>Capture mode: 1 - pos. edge</description>
+                  <name>RISING</name>
+                  <description>Capture on rising edge</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CM_2</name>
-                  <description>Capture mode: 1 - neg. edge</description>
+                  <name>FALLING</name>
+                  <description>Capture on falling edge</description>
                   <value>2</value>
                 </enumeratedValue>
                 <enumeratedValue>
-                  <name>CM_3</name>
-                  <description>Capture mode: 1 - both edges</description>
+                  <name>BOTH</name>
+                  <description>Capture on both rising and falling edges</description>
                   <value>3</value>
                 </enumeratedValue>
               </enumeratedValues>

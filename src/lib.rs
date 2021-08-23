@@ -9107,44 +9107,376 @@ pub mod adc10 {
                 W(writer)
             }
         }
-        #[doc = "Field `ADC10AE0` reader - ADC10 Analog Enable 0 register"]
-        pub struct ADC10AE0_R(crate::FieldReader<u8, u8>);
-        impl ADC10AE0_R {
-            pub(crate) fn new(bits: u8) -> Self {
-                ADC10AE0_R(crate::FieldReader::new(bits))
+        #[doc = "Field `A0` reader - ADC10 analog enable, input A0"]
+        pub struct A0_R(crate::FieldReader<bool, bool>);
+        impl A0_R {
+            pub(crate) fn new(bits: bool) -> Self {
+                A0_R(crate::FieldReader::new(bits))
             }
         }
-        impl core::ops::Deref for ADC10AE0_R {
-            type Target = crate::FieldReader<u8, u8>;
+        impl core::ops::Deref for A0_R {
+            type Target = crate::FieldReader<bool, bool>;
             #[inline(always)]
             fn deref(&self) -> &Self::Target {
                 &self.0
             }
         }
-        #[doc = "Field `ADC10AE0` writer - ADC10 Analog Enable 0 register"]
-        pub struct ADC10AE0_W<'a> {
+        #[doc = "Field `A0` writer - ADC10 analog enable, input A0"]
+        pub struct A0_W<'a> {
             w: &'a mut W,
         }
-        impl<'a> ADC10AE0_W<'a> {
+        impl<'a> A0_W<'a> {
+            #[doc = r"Sets the field bit"]
+            #[inline(always)]
+            pub fn set_bit(self) -> &'a mut W {
+                self.bit(true)
+            }
+            #[doc = r"Clears the field bit"]
+            #[inline(always)]
+            pub fn clear_bit(self) -> &'a mut W {
+                self.bit(false)
+            }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
-            pub fn bits(self, value: u8) -> &'a mut W {
-                self.w.bits = (self.w.bits & !0xff) | (value as u8 & 0xff);
+            pub fn bit(self, value: bool) -> &'a mut W {
+                self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
+                self.w
+            }
+        }
+        #[doc = "Field `A1` reader - ADC10 analog enable, input A1"]
+        pub struct A1_R(crate::FieldReader<bool, bool>);
+        impl A1_R {
+            pub(crate) fn new(bits: bool) -> Self {
+                A1_R(crate::FieldReader::new(bits))
+            }
+        }
+        impl core::ops::Deref for A1_R {
+            type Target = crate::FieldReader<bool, bool>;
+            #[inline(always)]
+            fn deref(&self) -> &Self::Target {
+                &self.0
+            }
+        }
+        #[doc = "Field `A1` writer - ADC10 analog enable, input A1"]
+        pub struct A1_W<'a> {
+            w: &'a mut W,
+        }
+        impl<'a> A1_W<'a> {
+            #[doc = r"Sets the field bit"]
+            #[inline(always)]
+            pub fn set_bit(self) -> &'a mut W {
+                self.bit(true)
+            }
+            #[doc = r"Clears the field bit"]
+            #[inline(always)]
+            pub fn clear_bit(self) -> &'a mut W {
+                self.bit(false)
+            }
+            #[doc = r"Writes raw bits to the field"]
+            #[inline(always)]
+            pub fn bit(self, value: bool) -> &'a mut W {
+                self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
+                self.w
+            }
+        }
+        #[doc = "Field `A2` reader - ADC10 analog enable, input A2"]
+        pub struct A2_R(crate::FieldReader<bool, bool>);
+        impl A2_R {
+            pub(crate) fn new(bits: bool) -> Self {
+                A2_R(crate::FieldReader::new(bits))
+            }
+        }
+        impl core::ops::Deref for A2_R {
+            type Target = crate::FieldReader<bool, bool>;
+            #[inline(always)]
+            fn deref(&self) -> &Self::Target {
+                &self.0
+            }
+        }
+        #[doc = "Field `A2` writer - ADC10 analog enable, input A2"]
+        pub struct A2_W<'a> {
+            w: &'a mut W,
+        }
+        impl<'a> A2_W<'a> {
+            #[doc = r"Sets the field bit"]
+            #[inline(always)]
+            pub fn set_bit(self) -> &'a mut W {
+                self.bit(true)
+            }
+            #[doc = r"Clears the field bit"]
+            #[inline(always)]
+            pub fn clear_bit(self) -> &'a mut W {
+                self.bit(false)
+            }
+            #[doc = r"Writes raw bits to the field"]
+            #[inline(always)]
+            pub fn bit(self, value: bool) -> &'a mut W {
+                self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
+                self.w
+            }
+        }
+        #[doc = "Field `A3` reader - ADC10 analog enable, input A3"]
+        pub struct A3_R(crate::FieldReader<bool, bool>);
+        impl A3_R {
+            pub(crate) fn new(bits: bool) -> Self {
+                A3_R(crate::FieldReader::new(bits))
+            }
+        }
+        impl core::ops::Deref for A3_R {
+            type Target = crate::FieldReader<bool, bool>;
+            #[inline(always)]
+            fn deref(&self) -> &Self::Target {
+                &self.0
+            }
+        }
+        #[doc = "Field `A3` writer - ADC10 analog enable, input A3"]
+        pub struct A3_W<'a> {
+            w: &'a mut W,
+        }
+        impl<'a> A3_W<'a> {
+            #[doc = r"Sets the field bit"]
+            #[inline(always)]
+            pub fn set_bit(self) -> &'a mut W {
+                self.bit(true)
+            }
+            #[doc = r"Clears the field bit"]
+            #[inline(always)]
+            pub fn clear_bit(self) -> &'a mut W {
+                self.bit(false)
+            }
+            #[doc = r"Writes raw bits to the field"]
+            #[inline(always)]
+            pub fn bit(self, value: bool) -> &'a mut W {
+                self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
+                self.w
+            }
+        }
+        #[doc = "Field `A4` reader - ADC10 analog enable, input A4"]
+        pub struct A4_R(crate::FieldReader<bool, bool>);
+        impl A4_R {
+            pub(crate) fn new(bits: bool) -> Self {
+                A4_R(crate::FieldReader::new(bits))
+            }
+        }
+        impl core::ops::Deref for A4_R {
+            type Target = crate::FieldReader<bool, bool>;
+            #[inline(always)]
+            fn deref(&self) -> &Self::Target {
+                &self.0
+            }
+        }
+        #[doc = "Field `A4` writer - ADC10 analog enable, input A4"]
+        pub struct A4_W<'a> {
+            w: &'a mut W,
+        }
+        impl<'a> A4_W<'a> {
+            #[doc = r"Sets the field bit"]
+            #[inline(always)]
+            pub fn set_bit(self) -> &'a mut W {
+                self.bit(true)
+            }
+            #[doc = r"Clears the field bit"]
+            #[inline(always)]
+            pub fn clear_bit(self) -> &'a mut W {
+                self.bit(false)
+            }
+            #[doc = r"Writes raw bits to the field"]
+            #[inline(always)]
+            pub fn bit(self, value: bool) -> &'a mut W {
+                self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
+                self.w
+            }
+        }
+        #[doc = "Field `A5` reader - ADC10 analog enable, input A5"]
+        pub struct A5_R(crate::FieldReader<bool, bool>);
+        impl A5_R {
+            pub(crate) fn new(bits: bool) -> Self {
+                A5_R(crate::FieldReader::new(bits))
+            }
+        }
+        impl core::ops::Deref for A5_R {
+            type Target = crate::FieldReader<bool, bool>;
+            #[inline(always)]
+            fn deref(&self) -> &Self::Target {
+                &self.0
+            }
+        }
+        #[doc = "Field `A5` writer - ADC10 analog enable, input A5"]
+        pub struct A5_W<'a> {
+            w: &'a mut W,
+        }
+        impl<'a> A5_W<'a> {
+            #[doc = r"Sets the field bit"]
+            #[inline(always)]
+            pub fn set_bit(self) -> &'a mut W {
+                self.bit(true)
+            }
+            #[doc = r"Clears the field bit"]
+            #[inline(always)]
+            pub fn clear_bit(self) -> &'a mut W {
+                self.bit(false)
+            }
+            #[doc = r"Writes raw bits to the field"]
+            #[inline(always)]
+            pub fn bit(self, value: bool) -> &'a mut W {
+                self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
+                self.w
+            }
+        }
+        #[doc = "Field `A6` reader - ADC10 analog enable, input A6"]
+        pub struct A6_R(crate::FieldReader<bool, bool>);
+        impl A6_R {
+            pub(crate) fn new(bits: bool) -> Self {
+                A6_R(crate::FieldReader::new(bits))
+            }
+        }
+        impl core::ops::Deref for A6_R {
+            type Target = crate::FieldReader<bool, bool>;
+            #[inline(always)]
+            fn deref(&self) -> &Self::Target {
+                &self.0
+            }
+        }
+        #[doc = "Field `A6` writer - ADC10 analog enable, input A6"]
+        pub struct A6_W<'a> {
+            w: &'a mut W,
+        }
+        impl<'a> A6_W<'a> {
+            #[doc = r"Sets the field bit"]
+            #[inline(always)]
+            pub fn set_bit(self) -> &'a mut W {
+                self.bit(true)
+            }
+            #[doc = r"Clears the field bit"]
+            #[inline(always)]
+            pub fn clear_bit(self) -> &'a mut W {
+                self.bit(false)
+            }
+            #[doc = r"Writes raw bits to the field"]
+            #[inline(always)]
+            pub fn bit(self, value: bool) -> &'a mut W {
+                self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
+                self.w
+            }
+        }
+        #[doc = "Field `A7` reader - ADC10 analog enable, input A7"]
+        pub struct A7_R(crate::FieldReader<bool, bool>);
+        impl A7_R {
+            pub(crate) fn new(bits: bool) -> Self {
+                A7_R(crate::FieldReader::new(bits))
+            }
+        }
+        impl core::ops::Deref for A7_R {
+            type Target = crate::FieldReader<bool, bool>;
+            #[inline(always)]
+            fn deref(&self) -> &Self::Target {
+                &self.0
+            }
+        }
+        #[doc = "Field `A7` writer - ADC10 analog enable, input A7"]
+        pub struct A7_W<'a> {
+            w: &'a mut W,
+        }
+        impl<'a> A7_W<'a> {
+            #[doc = r"Sets the field bit"]
+            #[inline(always)]
+            pub fn set_bit(self) -> &'a mut W {
+                self.bit(true)
+            }
+            #[doc = r"Clears the field bit"]
+            #[inline(always)]
+            pub fn clear_bit(self) -> &'a mut W {
+                self.bit(false)
+            }
+            #[doc = r"Writes raw bits to the field"]
+            #[inline(always)]
+            pub fn bit(self, value: bool) -> &'a mut W {
+                self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
                 self.w
             }
         }
         impl R {
-            #[doc = "Bits 0:7 - ADC10 Analog Enable 0 register"]
+            #[doc = "Bit 0 - ADC10 analog enable, input A0"]
             #[inline(always)]
-            pub fn adc10ae0(&self) -> ADC10AE0_R {
-                ADC10AE0_R::new((self.bits & 0xff) as u8)
+            pub fn a0(&self) -> A0_R {
+                A0_R::new((self.bits & 0x01) != 0)
+            }
+            #[doc = "Bit 1 - ADC10 analog enable, input A1"]
+            #[inline(always)]
+            pub fn a1(&self) -> A1_R {
+                A1_R::new(((self.bits >> 1) & 0x01) != 0)
+            }
+            #[doc = "Bit 2 - ADC10 analog enable, input A2"]
+            #[inline(always)]
+            pub fn a2(&self) -> A2_R {
+                A2_R::new(((self.bits >> 2) & 0x01) != 0)
+            }
+            #[doc = "Bit 3 - ADC10 analog enable, input A3"]
+            #[inline(always)]
+            pub fn a3(&self) -> A3_R {
+                A3_R::new(((self.bits >> 3) & 0x01) != 0)
+            }
+            #[doc = "Bit 4 - ADC10 analog enable, input A4"]
+            #[inline(always)]
+            pub fn a4(&self) -> A4_R {
+                A4_R::new(((self.bits >> 4) & 0x01) != 0)
+            }
+            #[doc = "Bit 5 - ADC10 analog enable, input A5"]
+            #[inline(always)]
+            pub fn a5(&self) -> A5_R {
+                A5_R::new(((self.bits >> 5) & 0x01) != 0)
+            }
+            #[doc = "Bit 6 - ADC10 analog enable, input A6"]
+            #[inline(always)]
+            pub fn a6(&self) -> A6_R {
+                A6_R::new(((self.bits >> 6) & 0x01) != 0)
+            }
+            #[doc = "Bit 7 - ADC10 analog enable, input A7"]
+            #[inline(always)]
+            pub fn a7(&self) -> A7_R {
+                A7_R::new(((self.bits >> 7) & 0x01) != 0)
             }
         }
         impl W {
-            #[doc = "Bits 0:7 - ADC10 Analog Enable 0 register"]
+            #[doc = "Bit 0 - ADC10 analog enable, input A0"]
             #[inline(always)]
-            pub fn adc10ae0(&mut self) -> ADC10AE0_W {
-                ADC10AE0_W { w: self }
+            pub fn a0(&mut self) -> A0_W {
+                A0_W { w: self }
+            }
+            #[doc = "Bit 1 - ADC10 analog enable, input A1"]
+            #[inline(always)]
+            pub fn a1(&mut self) -> A1_W {
+                A1_W { w: self }
+            }
+            #[doc = "Bit 2 - ADC10 analog enable, input A2"]
+            #[inline(always)]
+            pub fn a2(&mut self) -> A2_W {
+                A2_W { w: self }
+            }
+            #[doc = "Bit 3 - ADC10 analog enable, input A3"]
+            #[inline(always)]
+            pub fn a3(&mut self) -> A3_W {
+                A3_W { w: self }
+            }
+            #[doc = "Bit 4 - ADC10 analog enable, input A4"]
+            #[inline(always)]
+            pub fn a4(&mut self) -> A4_W {
+                A4_W { w: self }
+            }
+            #[doc = "Bit 5 - ADC10 analog enable, input A5"]
+            #[inline(always)]
+            pub fn a5(&mut self) -> A5_W {
+                A5_W { w: self }
+            }
+            #[doc = "Bit 6 - ADC10 analog enable, input A6"]
+            #[inline(always)]
+            pub fn a6(&mut self) -> A6_W {
+                A6_W { w: self }
+            }
+            #[doc = "Bit 7 - ADC10 analog enable, input A7"]
+            #[inline(always)]
+            pub fn a7(&mut self) -> A7_W {
+                A7_W { w: self }
             }
             #[doc = "Writes raw bits to the register."]
             #[inline(always)]
@@ -9615,13 +9947,13 @@ pub mod adc10 {
         #[repr(u8)]
         pub enum ADC10SHT_A {
             #[doc = "0: 4 x ADC10CLKs"]
-            ADC10SHT_0 = 0,
+            MUL_4 = 0,
             #[doc = "1: 8 x ADC10CLKs"]
-            ADC10SHT_1 = 1,
+            MUL_8 = 1,
             #[doc = "2: 16 x ADC10CLKs"]
-            ADC10SHT_2 = 2,
-            #[doc = "3: 64 x ADC10CLKs"]
-            ADC10SHT_3 = 3,
+            MUL_16 = 2,
+            #[doc = "3: 32 x ADC10CLKs"]
+            MUL_32 = 3,
         }
         impl From<ADC10SHT_A> for u8 {
             #[inline(always)]
@@ -9639,32 +9971,32 @@ pub mod adc10 {
             #[inline(always)]
             pub fn variant(&self) -> ADC10SHT_A {
                 match self.bits {
-                    0 => ADC10SHT_A::ADC10SHT_0,
-                    1 => ADC10SHT_A::ADC10SHT_1,
-                    2 => ADC10SHT_A::ADC10SHT_2,
-                    3 => ADC10SHT_A::ADC10SHT_3,
+                    0 => ADC10SHT_A::MUL_4,
+                    1 => ADC10SHT_A::MUL_8,
+                    2 => ADC10SHT_A::MUL_16,
+                    3 => ADC10SHT_A::MUL_32,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `ADC10SHT_0`"]
+            #[doc = "Checks if the value of the field is `MUL_4`"]
             #[inline(always)]
-            pub fn is_adc10sht_0(&self) -> bool {
-                **self == ADC10SHT_A::ADC10SHT_0
+            pub fn is_mul_4(&self) -> bool {
+                **self == ADC10SHT_A::MUL_4
             }
-            #[doc = "Checks if the value of the field is `ADC10SHT_1`"]
+            #[doc = "Checks if the value of the field is `MUL_8`"]
             #[inline(always)]
-            pub fn is_adc10sht_1(&self) -> bool {
-                **self == ADC10SHT_A::ADC10SHT_1
+            pub fn is_mul_8(&self) -> bool {
+                **self == ADC10SHT_A::MUL_8
             }
-            #[doc = "Checks if the value of the field is `ADC10SHT_2`"]
+            #[doc = "Checks if the value of the field is `MUL_16`"]
             #[inline(always)]
-            pub fn is_adc10sht_2(&self) -> bool {
-                **self == ADC10SHT_A::ADC10SHT_2
+            pub fn is_mul_16(&self) -> bool {
+                **self == ADC10SHT_A::MUL_16
             }
-            #[doc = "Checks if the value of the field is `ADC10SHT_3`"]
+            #[doc = "Checks if the value of the field is `MUL_32`"]
             #[inline(always)]
-            pub fn is_adc10sht_3(&self) -> bool {
-                **self == ADC10SHT_A::ADC10SHT_3
+            pub fn is_mul_32(&self) -> bool {
+                **self == ADC10SHT_A::MUL_32
             }
         }
         impl core::ops::Deref for ADC10SHT_R {
@@ -9686,23 +10018,23 @@ pub mod adc10 {
             }
             #[doc = "4 x ADC10CLKs"]
             #[inline(always)]
-            pub fn adc10sht_0(self) -> &'a mut W {
-                self.variant(ADC10SHT_A::ADC10SHT_0)
+            pub fn mul_4(self) -> &'a mut W {
+                self.variant(ADC10SHT_A::MUL_4)
             }
             #[doc = "8 x ADC10CLKs"]
             #[inline(always)]
-            pub fn adc10sht_1(self) -> &'a mut W {
-                self.variant(ADC10SHT_A::ADC10SHT_1)
+            pub fn mul_8(self) -> &'a mut W {
+                self.variant(ADC10SHT_A::MUL_8)
             }
             #[doc = "16 x ADC10CLKs"]
             #[inline(always)]
-            pub fn adc10sht_2(self) -> &'a mut W {
-                self.variant(ADC10SHT_A::ADC10SHT_2)
+            pub fn mul_16(self) -> &'a mut W {
+                self.variant(ADC10SHT_A::MUL_16)
             }
-            #[doc = "64 x ADC10CLKs"]
+            #[doc = "32 x ADC10CLKs"]
             #[inline(always)]
-            pub fn adc10sht_3(self) -> &'a mut W {
-                self.variant(ADC10SHT_A::ADC10SHT_3)
+            pub fn mul_32(self) -> &'a mut W {
+                self.variant(ADC10SHT_A::MUL_32)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -9716,21 +10048,21 @@ pub mod adc10 {
         #[repr(u8)]
         pub enum SREF_A {
             #[doc = "0: VR+ = AVCC and VR- = AVSS"]
-            SREF_0 = 0,
+            VCC_VSS = 0,
             #[doc = "1: VR+ = VREF+ and VR- = AVSS"]
-            SREF_1 = 1,
-            #[doc = "2: VR+ = VEREF+ and VR- = AVSS"]
-            SREF_2 = 2,
-            #[doc = "3: VR+ = VEREF+ and VR- = AVSS"]
-            SREF_3 = 3,
-            #[doc = "4: VR+ = AVCC and VR- = VREF-/VEREF-"]
-            SREF_4 = 4,
-            #[doc = "5: VR+ = VREF+ and VR- = VREF-/VEREF-"]
-            SREF_5 = 5,
-            #[doc = "6: VR+ = VEREF+ and VR- = VREF-/VEREF-"]
-            SREF_6 = 6,
-            #[doc = "7: VR+ = VEREF+ and VR- = VREF-/VEREF-"]
-            SREF_7 = 7,
+            VREF_VSS = 1,
+            #[doc = "2: VR+ = VeREF+ and VR- = AVSS. Devices with VeREF+ pin only."]
+            VEREF_VSS = 2,
+            #[doc = "3: VR+ = Buffered VeREF+ and VR- = AVSS. Devices with VeREF+ pin only."]
+            VEREF_BUF_VSS = 3,
+            #[doc = "4: VR+ = AVCC and VR- = VREF-/VeREF-. Devices with VeREF+ pin only."]
+            VCC_VREF_VEREF = 4,
+            #[doc = "5: VR+ = VREF+ and VR- = VREF/VeREF-. Devices with VeREF- pin only."]
+            VREF_VREF_VEREF = 5,
+            #[doc = "6: VR+ = VeREF+ and VR- = VREF/VeREF-. Devices with VeREF+/- pin only."]
+            VEREF_VREF_VEREF = 6,
+            #[doc = "7: VR+ = Buffered VeREF+ and VR- = VREF/VeREF-. Devices with VeREF+/- pin only."]
+            VEREF_BUF_VREF_VEREF = 7,
         }
         impl From<SREF_A> for u8 {
             #[inline(always)]
@@ -9748,56 +10080,56 @@ pub mod adc10 {
             #[inline(always)]
             pub fn variant(&self) -> SREF_A {
                 match self.bits {
-                    0 => SREF_A::SREF_0,
-                    1 => SREF_A::SREF_1,
-                    2 => SREF_A::SREF_2,
-                    3 => SREF_A::SREF_3,
-                    4 => SREF_A::SREF_4,
-                    5 => SREF_A::SREF_5,
-                    6 => SREF_A::SREF_6,
-                    7 => SREF_A::SREF_7,
+                    0 => SREF_A::VCC_VSS,
+                    1 => SREF_A::VREF_VSS,
+                    2 => SREF_A::VEREF_VSS,
+                    3 => SREF_A::VEREF_BUF_VSS,
+                    4 => SREF_A::VCC_VREF_VEREF,
+                    5 => SREF_A::VREF_VREF_VEREF,
+                    6 => SREF_A::VEREF_VREF_VEREF,
+                    7 => SREF_A::VEREF_BUF_VREF_VEREF,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `SREF_0`"]
+            #[doc = "Checks if the value of the field is `VCC_VSS`"]
             #[inline(always)]
-            pub fn is_sref_0(&self) -> bool {
-                **self == SREF_A::SREF_0
+            pub fn is_vcc_vss(&self) -> bool {
+                **self == SREF_A::VCC_VSS
             }
-            #[doc = "Checks if the value of the field is `SREF_1`"]
+            #[doc = "Checks if the value of the field is `VREF_VSS`"]
             #[inline(always)]
-            pub fn is_sref_1(&self) -> bool {
-                **self == SREF_A::SREF_1
+            pub fn is_vref_vss(&self) -> bool {
+                **self == SREF_A::VREF_VSS
             }
-            #[doc = "Checks if the value of the field is `SREF_2`"]
+            #[doc = "Checks if the value of the field is `VEREF_VSS`"]
             #[inline(always)]
-            pub fn is_sref_2(&self) -> bool {
-                **self == SREF_A::SREF_2
+            pub fn is_veref_vss(&self) -> bool {
+                **self == SREF_A::VEREF_VSS
             }
-            #[doc = "Checks if the value of the field is `SREF_3`"]
+            #[doc = "Checks if the value of the field is `VEREF_BUF_VSS`"]
             #[inline(always)]
-            pub fn is_sref_3(&self) -> bool {
-                **self == SREF_A::SREF_3
+            pub fn is_veref_buf_vss(&self) -> bool {
+                **self == SREF_A::VEREF_BUF_VSS
             }
-            #[doc = "Checks if the value of the field is `SREF_4`"]
+            #[doc = "Checks if the value of the field is `VCC_VREF_VEREF`"]
             #[inline(always)]
-            pub fn is_sref_4(&self) -> bool {
-                **self == SREF_A::SREF_4
+            pub fn is_vcc_vref_veref(&self) -> bool {
+                **self == SREF_A::VCC_VREF_VEREF
             }
-            #[doc = "Checks if the value of the field is `SREF_5`"]
+            #[doc = "Checks if the value of the field is `VREF_VREF_VEREF`"]
             #[inline(always)]
-            pub fn is_sref_5(&self) -> bool {
-                **self == SREF_A::SREF_5
+            pub fn is_vref_vref_veref(&self) -> bool {
+                **self == SREF_A::VREF_VREF_VEREF
             }
-            #[doc = "Checks if the value of the field is `SREF_6`"]
+            #[doc = "Checks if the value of the field is `VEREF_VREF_VEREF`"]
             #[inline(always)]
-            pub fn is_sref_6(&self) -> bool {
-                **self == SREF_A::SREF_6
+            pub fn is_veref_vref_veref(&self) -> bool {
+                **self == SREF_A::VEREF_VREF_VEREF
             }
-            #[doc = "Checks if the value of the field is `SREF_7`"]
+            #[doc = "Checks if the value of the field is `VEREF_BUF_VREF_VEREF`"]
             #[inline(always)]
-            pub fn is_sref_7(&self) -> bool {
-                **self == SREF_A::SREF_7
+            pub fn is_veref_buf_vref_veref(&self) -> bool {
+                **self == SREF_A::VEREF_BUF_VREF_VEREF
             }
         }
         impl core::ops::Deref for SREF_R {
@@ -9819,43 +10151,43 @@ pub mod adc10 {
             }
             #[doc = "VR+ = AVCC and VR- = AVSS"]
             #[inline(always)]
-            pub fn sref_0(self) -> &'a mut W {
-                self.variant(SREF_A::SREF_0)
+            pub fn vcc_vss(self) -> &'a mut W {
+                self.variant(SREF_A::VCC_VSS)
             }
             #[doc = "VR+ = VREF+ and VR- = AVSS"]
             #[inline(always)]
-            pub fn sref_1(self) -> &'a mut W {
-                self.variant(SREF_A::SREF_1)
+            pub fn vref_vss(self) -> &'a mut W {
+                self.variant(SREF_A::VREF_VSS)
             }
-            #[doc = "VR+ = VEREF+ and VR- = AVSS"]
+            #[doc = "VR+ = VeREF+ and VR- = AVSS. Devices with VeREF+ pin only."]
             #[inline(always)]
-            pub fn sref_2(self) -> &'a mut W {
-                self.variant(SREF_A::SREF_2)
+            pub fn veref_vss(self) -> &'a mut W {
+                self.variant(SREF_A::VEREF_VSS)
             }
-            #[doc = "VR+ = VEREF+ and VR- = AVSS"]
+            #[doc = "VR+ = Buffered VeREF+ and VR- = AVSS. Devices with VeREF+ pin only."]
             #[inline(always)]
-            pub fn sref_3(self) -> &'a mut W {
-                self.variant(SREF_A::SREF_3)
+            pub fn veref_buf_vss(self) -> &'a mut W {
+                self.variant(SREF_A::VEREF_BUF_VSS)
             }
-            #[doc = "VR+ = AVCC and VR- = VREF-/VEREF-"]
+            #[doc = "VR+ = AVCC and VR- = VREF-/VeREF-. Devices with VeREF+ pin only."]
             #[inline(always)]
-            pub fn sref_4(self) -> &'a mut W {
-                self.variant(SREF_A::SREF_4)
+            pub fn vcc_vref_veref(self) -> &'a mut W {
+                self.variant(SREF_A::VCC_VREF_VEREF)
             }
-            #[doc = "VR+ = VREF+ and VR- = VREF-/VEREF-"]
+            #[doc = "VR+ = VREF+ and VR- = VREF/VeREF-. Devices with VeREF- pin only."]
             #[inline(always)]
-            pub fn sref_5(self) -> &'a mut W {
-                self.variant(SREF_A::SREF_5)
+            pub fn vref_vref_veref(self) -> &'a mut W {
+                self.variant(SREF_A::VREF_VREF_VEREF)
             }
-            #[doc = "VR+ = VEREF+ and VR- = VREF-/VEREF-"]
+            #[doc = "VR+ = VeREF+ and VR- = VREF/VeREF-. Devices with VeREF+/- pin only."]
             #[inline(always)]
-            pub fn sref_6(self) -> &'a mut W {
-                self.variant(SREF_A::SREF_6)
+            pub fn veref_vref_veref(self) -> &'a mut W {
+                self.variant(SREF_A::VEREF_VREF_VEREF)
             }
-            #[doc = "VR+ = VEREF+ and VR- = VREF-/VEREF-"]
+            #[doc = "VR+ = Buffered VeREF+ and VR- = VREF/VeREF-. Devices with VeREF+/- pin only."]
             #[inline(always)]
-            pub fn sref_7(self) -> &'a mut W {
-                self.variant(SREF_A::SREF_7)
+            pub fn veref_buf_vref_veref(self) -> &'a mut W {
+                self.variant(SREF_A::VEREF_BUF_VREF_VEREF)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -10106,13 +10438,13 @@ pub mod adc10 {
         #[repr(u8)]
         pub enum CONSEQ_A {
             #[doc = "0: Single channel single conversion"]
-            CONSEQ_0 = 0,
+            SINGLE = 0,
             #[doc = "1: Sequence of channels"]
-            CONSEQ_1 = 1,
+            SEQUENCE = 1,
             #[doc = "2: Repeat single channel"]
-            CONSEQ_2 = 2,
+            SINGLE_REPEAT = 2,
             #[doc = "3: Repeat sequence of channels"]
-            CONSEQ_3 = 3,
+            SEQUENCE_REPEAT = 3,
         }
         impl From<CONSEQ_A> for u8 {
             #[inline(always)]
@@ -10130,32 +10462,32 @@ pub mod adc10 {
             #[inline(always)]
             pub fn variant(&self) -> CONSEQ_A {
                 match self.bits {
-                    0 => CONSEQ_A::CONSEQ_0,
-                    1 => CONSEQ_A::CONSEQ_1,
-                    2 => CONSEQ_A::CONSEQ_2,
-                    3 => CONSEQ_A::CONSEQ_3,
+                    0 => CONSEQ_A::SINGLE,
+                    1 => CONSEQ_A::SEQUENCE,
+                    2 => CONSEQ_A::SINGLE_REPEAT,
+                    3 => CONSEQ_A::SEQUENCE_REPEAT,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `CONSEQ_0`"]
+            #[doc = "Checks if the value of the field is `SINGLE`"]
             #[inline(always)]
-            pub fn is_conseq_0(&self) -> bool {
-                **self == CONSEQ_A::CONSEQ_0
+            pub fn is_single(&self) -> bool {
+                **self == CONSEQ_A::SINGLE
             }
-            #[doc = "Checks if the value of the field is `CONSEQ_1`"]
+            #[doc = "Checks if the value of the field is `SEQUENCE`"]
             #[inline(always)]
-            pub fn is_conseq_1(&self) -> bool {
-                **self == CONSEQ_A::CONSEQ_1
+            pub fn is_sequence(&self) -> bool {
+                **self == CONSEQ_A::SEQUENCE
             }
-            #[doc = "Checks if the value of the field is `CONSEQ_2`"]
+            #[doc = "Checks if the value of the field is `SINGLE_REPEAT`"]
             #[inline(always)]
-            pub fn is_conseq_2(&self) -> bool {
-                **self == CONSEQ_A::CONSEQ_2
+            pub fn is_single_repeat(&self) -> bool {
+                **self == CONSEQ_A::SINGLE_REPEAT
             }
-            #[doc = "Checks if the value of the field is `CONSEQ_3`"]
+            #[doc = "Checks if the value of the field is `SEQUENCE_REPEAT`"]
             #[inline(always)]
-            pub fn is_conseq_3(&self) -> bool {
-                **self == CONSEQ_A::CONSEQ_3
+            pub fn is_sequence_repeat(&self) -> bool {
+                **self == CONSEQ_A::SEQUENCE_REPEAT
             }
         }
         impl core::ops::Deref for CONSEQ_R {
@@ -10177,23 +10509,23 @@ pub mod adc10 {
             }
             #[doc = "Single channel single conversion"]
             #[inline(always)]
-            pub fn conseq_0(self) -> &'a mut W {
-                self.variant(CONSEQ_A::CONSEQ_0)
+            pub fn single(self) -> &'a mut W {
+                self.variant(CONSEQ_A::SINGLE)
             }
             #[doc = "Sequence of channels"]
             #[inline(always)]
-            pub fn conseq_1(self) -> &'a mut W {
-                self.variant(CONSEQ_A::CONSEQ_1)
+            pub fn sequence(self) -> &'a mut W {
+                self.variant(CONSEQ_A::SEQUENCE)
             }
             #[doc = "Repeat single channel"]
             #[inline(always)]
-            pub fn conseq_2(self) -> &'a mut W {
-                self.variant(CONSEQ_A::CONSEQ_2)
+            pub fn single_repeat(self) -> &'a mut W {
+                self.variant(CONSEQ_A::SINGLE_REPEAT)
             }
             #[doc = "Repeat sequence of channels"]
             #[inline(always)]
-            pub fn conseq_3(self) -> &'a mut W {
-                self.variant(CONSEQ_A::CONSEQ_3)
+            pub fn sequence_repeat(self) -> &'a mut W {
+                self.variant(CONSEQ_A::SEQUENCE_REPEAT)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -10207,13 +10539,13 @@ pub mod adc10 {
         #[repr(u8)]
         pub enum ADC10SSEL_A {
             #[doc = "0: ADC10OSC"]
-            ADC10SSEL_0 = 0,
+            ADC10OSC = 0,
             #[doc = "1: ACLK"]
-            ADC10SSEL_1 = 1,
+            ACLK = 1,
             #[doc = "2: MCLK"]
-            ADC10SSEL_2 = 2,
+            MCLK = 2,
             #[doc = "3: SMCLK"]
-            ADC10SSEL_3 = 3,
+            SMCLK = 3,
         }
         impl From<ADC10SSEL_A> for u8 {
             #[inline(always)]
@@ -10231,32 +10563,32 @@ pub mod adc10 {
             #[inline(always)]
             pub fn variant(&self) -> ADC10SSEL_A {
                 match self.bits {
-                    0 => ADC10SSEL_A::ADC10SSEL_0,
-                    1 => ADC10SSEL_A::ADC10SSEL_1,
-                    2 => ADC10SSEL_A::ADC10SSEL_2,
-                    3 => ADC10SSEL_A::ADC10SSEL_3,
+                    0 => ADC10SSEL_A::ADC10OSC,
+                    1 => ADC10SSEL_A::ACLK,
+                    2 => ADC10SSEL_A::MCLK,
+                    3 => ADC10SSEL_A::SMCLK,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `ADC10SSEL_0`"]
+            #[doc = "Checks if the value of the field is `ADC10OSC`"]
             #[inline(always)]
-            pub fn is_adc10ssel_0(&self) -> bool {
-                **self == ADC10SSEL_A::ADC10SSEL_0
+            pub fn is_adc10osc(&self) -> bool {
+                **self == ADC10SSEL_A::ADC10OSC
             }
-            #[doc = "Checks if the value of the field is `ADC10SSEL_1`"]
+            #[doc = "Checks if the value of the field is `ACLK`"]
             #[inline(always)]
-            pub fn is_adc10ssel_1(&self) -> bool {
-                **self == ADC10SSEL_A::ADC10SSEL_1
+            pub fn is_aclk(&self) -> bool {
+                **self == ADC10SSEL_A::ACLK
             }
-            #[doc = "Checks if the value of the field is `ADC10SSEL_2`"]
+            #[doc = "Checks if the value of the field is `MCLK`"]
             #[inline(always)]
-            pub fn is_adc10ssel_2(&self) -> bool {
-                **self == ADC10SSEL_A::ADC10SSEL_2
+            pub fn is_mclk(&self) -> bool {
+                **self == ADC10SSEL_A::MCLK
             }
-            #[doc = "Checks if the value of the field is `ADC10SSEL_3`"]
+            #[doc = "Checks if the value of the field is `SMCLK`"]
             #[inline(always)]
-            pub fn is_adc10ssel_3(&self) -> bool {
-                **self == ADC10SSEL_A::ADC10SSEL_3
+            pub fn is_smclk(&self) -> bool {
+                **self == ADC10SSEL_A::SMCLK
             }
         }
         impl core::ops::Deref for ADC10SSEL_R {
@@ -10278,23 +10610,23 @@ pub mod adc10 {
             }
             #[doc = "ADC10OSC"]
             #[inline(always)]
-            pub fn adc10ssel_0(self) -> &'a mut W {
-                self.variant(ADC10SSEL_A::ADC10SSEL_0)
+            pub fn adc10osc(self) -> &'a mut W {
+                self.variant(ADC10SSEL_A::ADC10OSC)
             }
             #[doc = "ACLK"]
             #[inline(always)]
-            pub fn adc10ssel_1(self) -> &'a mut W {
-                self.variant(ADC10SSEL_A::ADC10SSEL_1)
+            pub fn aclk(self) -> &'a mut W {
+                self.variant(ADC10SSEL_A::ACLK)
             }
             #[doc = "MCLK"]
             #[inline(always)]
-            pub fn adc10ssel_2(self) -> &'a mut W {
-                self.variant(ADC10SSEL_A::ADC10SSEL_2)
+            pub fn mclk(self) -> &'a mut W {
+                self.variant(ADC10SSEL_A::MCLK)
             }
             #[doc = "SMCLK"]
             #[inline(always)]
-            pub fn adc10ssel_3(self) -> &'a mut W {
-                self.variant(ADC10SSEL_A::ADC10SSEL_3)
+            pub fn smclk(self) -> &'a mut W {
+                self.variant(ADC10SSEL_A::SMCLK)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -10307,22 +10639,22 @@ pub mod adc10 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum ADC10DIV_A {
-            #[doc = "0: ADC10 Clock Divider Select 0"]
-            ADC10DIV_0 = 0,
-            #[doc = "1: ADC10 Clock Divider Select 1"]
-            ADC10DIV_1 = 1,
-            #[doc = "2: ADC10 Clock Divider Select 2"]
-            ADC10DIV_2 = 2,
-            #[doc = "3: ADC10 Clock Divider Select 3"]
-            ADC10DIV_3 = 3,
-            #[doc = "4: ADC10 Clock Divider Select 4"]
-            ADC10DIV_4 = 4,
-            #[doc = "5: ADC10 Clock Divider Select 5"]
-            ADC10DIV_5 = 5,
-            #[doc = "6: ADC10 Clock Divider Select 6"]
-            ADC10DIV_6 = 6,
-            #[doc = "7: ADC10 Clock Divider Select 7"]
-            ADC10DIV_7 = 7,
+            #[doc = "0: /1"]
+            DIV_1 = 0,
+            #[doc = "1: /2"]
+            DIV_2 = 1,
+            #[doc = "2: /3"]
+            DIV_3 = 2,
+            #[doc = "3: /4"]
+            DIV_4 = 3,
+            #[doc = "4: /5"]
+            DIV_5 = 4,
+            #[doc = "5: /6"]
+            DIV_6 = 5,
+            #[doc = "6: /7"]
+            DIV_7 = 6,
+            #[doc = "7: /8"]
+            DIV_8 = 7,
         }
         impl From<ADC10DIV_A> for u8 {
             #[inline(always)]
@@ -10340,56 +10672,56 @@ pub mod adc10 {
             #[inline(always)]
             pub fn variant(&self) -> ADC10DIV_A {
                 match self.bits {
-                    0 => ADC10DIV_A::ADC10DIV_0,
-                    1 => ADC10DIV_A::ADC10DIV_1,
-                    2 => ADC10DIV_A::ADC10DIV_2,
-                    3 => ADC10DIV_A::ADC10DIV_3,
-                    4 => ADC10DIV_A::ADC10DIV_4,
-                    5 => ADC10DIV_A::ADC10DIV_5,
-                    6 => ADC10DIV_A::ADC10DIV_6,
-                    7 => ADC10DIV_A::ADC10DIV_7,
+                    0 => ADC10DIV_A::DIV_1,
+                    1 => ADC10DIV_A::DIV_2,
+                    2 => ADC10DIV_A::DIV_3,
+                    3 => ADC10DIV_A::DIV_4,
+                    4 => ADC10DIV_A::DIV_5,
+                    5 => ADC10DIV_A::DIV_6,
+                    6 => ADC10DIV_A::DIV_7,
+                    7 => ADC10DIV_A::DIV_8,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `ADC10DIV_0`"]
+            #[doc = "Checks if the value of the field is `DIV_1`"]
             #[inline(always)]
-            pub fn is_adc10div_0(&self) -> bool {
-                **self == ADC10DIV_A::ADC10DIV_0
+            pub fn is_div_1(&self) -> bool {
+                **self == ADC10DIV_A::DIV_1
             }
-            #[doc = "Checks if the value of the field is `ADC10DIV_1`"]
+            #[doc = "Checks if the value of the field is `DIV_2`"]
             #[inline(always)]
-            pub fn is_adc10div_1(&self) -> bool {
-                **self == ADC10DIV_A::ADC10DIV_1
+            pub fn is_div_2(&self) -> bool {
+                **self == ADC10DIV_A::DIV_2
             }
-            #[doc = "Checks if the value of the field is `ADC10DIV_2`"]
+            #[doc = "Checks if the value of the field is `DIV_3`"]
             #[inline(always)]
-            pub fn is_adc10div_2(&self) -> bool {
-                **self == ADC10DIV_A::ADC10DIV_2
+            pub fn is_div_3(&self) -> bool {
+                **self == ADC10DIV_A::DIV_3
             }
-            #[doc = "Checks if the value of the field is `ADC10DIV_3`"]
+            #[doc = "Checks if the value of the field is `DIV_4`"]
             #[inline(always)]
-            pub fn is_adc10div_3(&self) -> bool {
-                **self == ADC10DIV_A::ADC10DIV_3
+            pub fn is_div_4(&self) -> bool {
+                **self == ADC10DIV_A::DIV_4
             }
-            #[doc = "Checks if the value of the field is `ADC10DIV_4`"]
+            #[doc = "Checks if the value of the field is `DIV_5`"]
             #[inline(always)]
-            pub fn is_adc10div_4(&self) -> bool {
-                **self == ADC10DIV_A::ADC10DIV_4
+            pub fn is_div_5(&self) -> bool {
+                **self == ADC10DIV_A::DIV_5
             }
-            #[doc = "Checks if the value of the field is `ADC10DIV_5`"]
+            #[doc = "Checks if the value of the field is `DIV_6`"]
             #[inline(always)]
-            pub fn is_adc10div_5(&self) -> bool {
-                **self == ADC10DIV_A::ADC10DIV_5
+            pub fn is_div_6(&self) -> bool {
+                **self == ADC10DIV_A::DIV_6
             }
-            #[doc = "Checks if the value of the field is `ADC10DIV_6`"]
+            #[doc = "Checks if the value of the field is `DIV_7`"]
             #[inline(always)]
-            pub fn is_adc10div_6(&self) -> bool {
-                **self == ADC10DIV_A::ADC10DIV_6
+            pub fn is_div_7(&self) -> bool {
+                **self == ADC10DIV_A::DIV_7
             }
-            #[doc = "Checks if the value of the field is `ADC10DIV_7`"]
+            #[doc = "Checks if the value of the field is `DIV_8`"]
             #[inline(always)]
-            pub fn is_adc10div_7(&self) -> bool {
-                **self == ADC10DIV_A::ADC10DIV_7
+            pub fn is_div_8(&self) -> bool {
+                **self == ADC10DIV_A::DIV_8
             }
         }
         impl core::ops::Deref for ADC10DIV_R {
@@ -10409,45 +10741,45 @@ pub mod adc10 {
             pub fn variant(self, variant: ADC10DIV_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "ADC10 Clock Divider Select 0"]
+            #[doc = "/1"]
             #[inline(always)]
-            pub fn adc10div_0(self) -> &'a mut W {
-                self.variant(ADC10DIV_A::ADC10DIV_0)
+            pub fn div_1(self) -> &'a mut W {
+                self.variant(ADC10DIV_A::DIV_1)
             }
-            #[doc = "ADC10 Clock Divider Select 1"]
+            #[doc = "/2"]
             #[inline(always)]
-            pub fn adc10div_1(self) -> &'a mut W {
-                self.variant(ADC10DIV_A::ADC10DIV_1)
+            pub fn div_2(self) -> &'a mut W {
+                self.variant(ADC10DIV_A::DIV_2)
             }
-            #[doc = "ADC10 Clock Divider Select 2"]
+            #[doc = "/3"]
             #[inline(always)]
-            pub fn adc10div_2(self) -> &'a mut W {
-                self.variant(ADC10DIV_A::ADC10DIV_2)
+            pub fn div_3(self) -> &'a mut W {
+                self.variant(ADC10DIV_A::DIV_3)
             }
-            #[doc = "ADC10 Clock Divider Select 3"]
+            #[doc = "/4"]
             #[inline(always)]
-            pub fn adc10div_3(self) -> &'a mut W {
-                self.variant(ADC10DIV_A::ADC10DIV_3)
+            pub fn div_4(self) -> &'a mut W {
+                self.variant(ADC10DIV_A::DIV_4)
             }
-            #[doc = "ADC10 Clock Divider Select 4"]
+            #[doc = "/5"]
             #[inline(always)]
-            pub fn adc10div_4(self) -> &'a mut W {
-                self.variant(ADC10DIV_A::ADC10DIV_4)
+            pub fn div_5(self) -> &'a mut W {
+                self.variant(ADC10DIV_A::DIV_5)
             }
-            #[doc = "ADC10 Clock Divider Select 5"]
+            #[doc = "/6"]
             #[inline(always)]
-            pub fn adc10div_5(self) -> &'a mut W {
-                self.variant(ADC10DIV_A::ADC10DIV_5)
+            pub fn div_6(self) -> &'a mut W {
+                self.variant(ADC10DIV_A::DIV_6)
             }
-            #[doc = "ADC10 Clock Divider Select 6"]
+            #[doc = "/7"]
             #[inline(always)]
-            pub fn adc10div_6(self) -> &'a mut W {
-                self.variant(ADC10DIV_A::ADC10DIV_6)
+            pub fn div_7(self) -> &'a mut W {
+                self.variant(ADC10DIV_A::DIV_7)
             }
-            #[doc = "ADC10 Clock Divider Select 7"]
+            #[doc = "/8"]
             #[inline(always)]
-            pub fn adc10div_7(self) -> &'a mut W {
-                self.variant(ADC10DIV_A::ADC10DIV_7)
+            pub fn div_8(self) -> &'a mut W {
+                self.variant(ADC10DIV_A::DIV_8)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -10532,14 +10864,14 @@ pub mod adc10 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum SHS_A {
-            #[doc = "0: ADC10SC"]
-            SHS_0 = 0,
-            #[doc = "1: TA3 OUT1"]
-            SHS_1 = 1,
-            #[doc = "2: TA3 OUT0"]
-            SHS_2 = 2,
-            #[doc = "3: TA3 OUT2"]
-            SHS_3 = 3,
+            #[doc = "0: ADC10SC bit"]
+            ADC10SC = 0,
+            #[doc = "1: Timer_A.OUT1"]
+            TIMER_A_OUT_1 = 1,
+            #[doc = "2: Timer_A.OUT0"]
+            TIMER_A_OUT_0 = 2,
+            #[doc = "3: Timer_A.OUT2 (Timer_A.OUT1 on MSP430F20x0, MSP430G2x31, and MSP430G2x30 devices"]
+            TIMER_A_OUT_2 = 3,
         }
         impl From<SHS_A> for u8 {
             #[inline(always)]
@@ -10557,32 +10889,32 @@ pub mod adc10 {
             #[inline(always)]
             pub fn variant(&self) -> SHS_A {
                 match self.bits {
-                    0 => SHS_A::SHS_0,
-                    1 => SHS_A::SHS_1,
-                    2 => SHS_A::SHS_2,
-                    3 => SHS_A::SHS_3,
+                    0 => SHS_A::ADC10SC,
+                    1 => SHS_A::TIMER_A_OUT_1,
+                    2 => SHS_A::TIMER_A_OUT_0,
+                    3 => SHS_A::TIMER_A_OUT_2,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `SHS_0`"]
+            #[doc = "Checks if the value of the field is `ADC10SC`"]
             #[inline(always)]
-            pub fn is_shs_0(&self) -> bool {
-                **self == SHS_A::SHS_0
+            pub fn is_adc10sc(&self) -> bool {
+                **self == SHS_A::ADC10SC
             }
-            #[doc = "Checks if the value of the field is `SHS_1`"]
+            #[doc = "Checks if the value of the field is `TIMER_A_OUT_1`"]
             #[inline(always)]
-            pub fn is_shs_1(&self) -> bool {
-                **self == SHS_A::SHS_1
+            pub fn is_timer_a_out_1(&self) -> bool {
+                **self == SHS_A::TIMER_A_OUT_1
             }
-            #[doc = "Checks if the value of the field is `SHS_2`"]
+            #[doc = "Checks if the value of the field is `TIMER_A_OUT_0`"]
             #[inline(always)]
-            pub fn is_shs_2(&self) -> bool {
-                **self == SHS_A::SHS_2
+            pub fn is_timer_a_out_0(&self) -> bool {
+                **self == SHS_A::TIMER_A_OUT_0
             }
-            #[doc = "Checks if the value of the field is `SHS_3`"]
+            #[doc = "Checks if the value of the field is `TIMER_A_OUT_2`"]
             #[inline(always)]
-            pub fn is_shs_3(&self) -> bool {
-                **self == SHS_A::SHS_3
+            pub fn is_timer_a_out_2(&self) -> bool {
+                **self == SHS_A::TIMER_A_OUT_2
             }
         }
         impl core::ops::Deref for SHS_R {
@@ -10602,25 +10934,25 @@ pub mod adc10 {
             pub fn variant(self, variant: SHS_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "ADC10SC"]
+            #[doc = "ADC10SC bit"]
             #[inline(always)]
-            pub fn shs_0(self) -> &'a mut W {
-                self.variant(SHS_A::SHS_0)
+            pub fn adc10sc(self) -> &'a mut W {
+                self.variant(SHS_A::ADC10SC)
             }
-            #[doc = "TA3 OUT1"]
+            #[doc = "Timer_A.OUT1"]
             #[inline(always)]
-            pub fn shs_1(self) -> &'a mut W {
-                self.variant(SHS_A::SHS_1)
+            pub fn timer_a_out_1(self) -> &'a mut W {
+                self.variant(SHS_A::TIMER_A_OUT_1)
             }
-            #[doc = "TA3 OUT0"]
+            #[doc = "Timer_A.OUT0"]
             #[inline(always)]
-            pub fn shs_2(self) -> &'a mut W {
-                self.variant(SHS_A::SHS_2)
+            pub fn timer_a_out_0(self) -> &'a mut W {
+                self.variant(SHS_A::TIMER_A_OUT_0)
             }
-            #[doc = "TA3 OUT2"]
+            #[doc = "Timer_A.OUT2 (Timer_A.OUT1 on MSP430F20x0, MSP430G2x31, and MSP430G2x30 devices"]
             #[inline(always)]
-            pub fn shs_3(self) -> &'a mut W {
-                self.variant(SHS_A::SHS_3)
+            pub fn timer_a_out_2(self) -> &'a mut W {
+                self.variant(SHS_A::TIMER_A_OUT_2)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -10633,38 +10965,32 @@ pub mod adc10 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum INCH_A {
-            #[doc = "0: Selects Channel 0"]
-            INCH_0 = 0,
-            #[doc = "1: Selects Channel 1"]
-            INCH_1 = 1,
-            #[doc = "2: Selects Channel 2"]
-            INCH_2 = 2,
-            #[doc = "3: Selects Channel 3"]
-            INCH_3 = 3,
-            #[doc = "4: Selects Channel 4"]
-            INCH_4 = 4,
-            #[doc = "5: Selects Channel 5"]
-            INCH_5 = 5,
-            #[doc = "6: Selects Channel 6"]
-            INCH_6 = 6,
-            #[doc = "7: Selects Channel 7"]
-            INCH_7 = 7,
-            #[doc = "8: Selects Channel 8"]
-            INCH_8 = 8,
-            #[doc = "9: Selects Channel 9"]
-            INCH_9 = 9,
-            #[doc = "10: Selects Channel 10"]
-            INCH_10 = 10,
-            #[doc = "11: Selects Channel 11"]
-            INCH_11 = 11,
-            #[doc = "12: Selects Channel 12"]
-            INCH_12 = 12,
-            #[doc = "13: Selects Channel 13"]
-            INCH_13 = 13,
-            #[doc = "14: Selects Channel 14"]
-            INCH_14 = 14,
-            #[doc = "15: Selects Channel 15"]
-            INCH_15 = 15,
+            #[doc = "0: A0"]
+            A0 = 0,
+            #[doc = "1: A1"]
+            A1 = 1,
+            #[doc = "2: A2"]
+            A2 = 2,
+            #[doc = "3: A3"]
+            A3 = 3,
+            #[doc = "4: A4"]
+            A4 = 4,
+            #[doc = "5: A5"]
+            A5 = 5,
+            #[doc = "6: A6"]
+            A6 = 6,
+            #[doc = "7: A7"]
+            A7 = 7,
+            #[doc = "8: VeREF+"]
+            VEREF_P = 8,
+            #[doc = "9: VREF-/VeREF-"]
+            VREF_VEREF_N = 9,
+            #[doc = "10: Temperature sensor"]
+            TEMP = 10,
+            #[doc = "11: (VCC - VSS) / 2"]
+            VCC_VSS_2 = 11,
+            #[doc = "15: A15"]
+            A12 = 15,
         }
         impl From<INCH_A> for u8 {
             #[inline(always)]
@@ -10680,106 +11006,88 @@ pub mod adc10 {
             }
             #[doc = r"Get enumerated values variant"]
             #[inline(always)]
-            pub fn variant(&self) -> INCH_A {
+            pub fn variant(&self) -> Option<INCH_A> {
                 match self.bits {
-                    0 => INCH_A::INCH_0,
-                    1 => INCH_A::INCH_1,
-                    2 => INCH_A::INCH_2,
-                    3 => INCH_A::INCH_3,
-                    4 => INCH_A::INCH_4,
-                    5 => INCH_A::INCH_5,
-                    6 => INCH_A::INCH_6,
-                    7 => INCH_A::INCH_7,
-                    8 => INCH_A::INCH_8,
-                    9 => INCH_A::INCH_9,
-                    10 => INCH_A::INCH_10,
-                    11 => INCH_A::INCH_11,
-                    12 => INCH_A::INCH_12,
-                    13 => INCH_A::INCH_13,
-                    14 => INCH_A::INCH_14,
-                    15 => INCH_A::INCH_15,
-                    _ => unreachable!(),
+                    0 => Some(INCH_A::A0),
+                    1 => Some(INCH_A::A1),
+                    2 => Some(INCH_A::A2),
+                    3 => Some(INCH_A::A3),
+                    4 => Some(INCH_A::A4),
+                    5 => Some(INCH_A::A5),
+                    6 => Some(INCH_A::A6),
+                    7 => Some(INCH_A::A7),
+                    8 => Some(INCH_A::VEREF_P),
+                    9 => Some(INCH_A::VREF_VEREF_N),
+                    10 => Some(INCH_A::TEMP),
+                    11 => Some(INCH_A::VCC_VSS_2),
+                    15 => Some(INCH_A::A12),
+                    _ => None,
                 }
             }
-            #[doc = "Checks if the value of the field is `INCH_0`"]
+            #[doc = "Checks if the value of the field is `A0`"]
             #[inline(always)]
-            pub fn is_inch_0(&self) -> bool {
-                **self == INCH_A::INCH_0
+            pub fn is_a0(&self) -> bool {
+                **self == INCH_A::A0
             }
-            #[doc = "Checks if the value of the field is `INCH_1`"]
+            #[doc = "Checks if the value of the field is `A1`"]
             #[inline(always)]
-            pub fn is_inch_1(&self) -> bool {
-                **self == INCH_A::INCH_1
+            pub fn is_a1(&self) -> bool {
+                **self == INCH_A::A1
             }
-            #[doc = "Checks if the value of the field is `INCH_2`"]
+            #[doc = "Checks if the value of the field is `A2`"]
             #[inline(always)]
-            pub fn is_inch_2(&self) -> bool {
-                **self == INCH_A::INCH_2
+            pub fn is_a2(&self) -> bool {
+                **self == INCH_A::A2
             }
-            #[doc = "Checks if the value of the field is `INCH_3`"]
+            #[doc = "Checks if the value of the field is `A3`"]
             #[inline(always)]
-            pub fn is_inch_3(&self) -> bool {
-                **self == INCH_A::INCH_3
+            pub fn is_a3(&self) -> bool {
+                **self == INCH_A::A3
             }
-            #[doc = "Checks if the value of the field is `INCH_4`"]
+            #[doc = "Checks if the value of the field is `A4`"]
             #[inline(always)]
-            pub fn is_inch_4(&self) -> bool {
-                **self == INCH_A::INCH_4
+            pub fn is_a4(&self) -> bool {
+                **self == INCH_A::A4
             }
-            #[doc = "Checks if the value of the field is `INCH_5`"]
+            #[doc = "Checks if the value of the field is `A5`"]
             #[inline(always)]
-            pub fn is_inch_5(&self) -> bool {
-                **self == INCH_A::INCH_5
+            pub fn is_a5(&self) -> bool {
+                **self == INCH_A::A5
             }
-            #[doc = "Checks if the value of the field is `INCH_6`"]
+            #[doc = "Checks if the value of the field is `A6`"]
             #[inline(always)]
-            pub fn is_inch_6(&self) -> bool {
-                **self == INCH_A::INCH_6
+            pub fn is_a6(&self) -> bool {
+                **self == INCH_A::A6
             }
-            #[doc = "Checks if the value of the field is `INCH_7`"]
+            #[doc = "Checks if the value of the field is `A7`"]
             #[inline(always)]
-            pub fn is_inch_7(&self) -> bool {
-                **self == INCH_A::INCH_7
+            pub fn is_a7(&self) -> bool {
+                **self == INCH_A::A7
             }
-            #[doc = "Checks if the value of the field is `INCH_8`"]
+            #[doc = "Checks if the value of the field is `VEREF_P`"]
             #[inline(always)]
-            pub fn is_inch_8(&self) -> bool {
-                **self == INCH_A::INCH_8
+            pub fn is_veref_p(&self) -> bool {
+                **self == INCH_A::VEREF_P
             }
-            #[doc = "Checks if the value of the field is `INCH_9`"]
+            #[doc = "Checks if the value of the field is `VREF_VEREF_N`"]
             #[inline(always)]
-            pub fn is_inch_9(&self) -> bool {
-                **self == INCH_A::INCH_9
+            pub fn is_vref_veref_n(&self) -> bool {
+                **self == INCH_A::VREF_VEREF_N
             }
-            #[doc = "Checks if the value of the field is `INCH_10`"]
+            #[doc = "Checks if the value of the field is `TEMP`"]
             #[inline(always)]
-            pub fn is_inch_10(&self) -> bool {
-                **self == INCH_A::INCH_10
+            pub fn is_temp(&self) -> bool {
+                **self == INCH_A::TEMP
             }
-            #[doc = "Checks if the value of the field is `INCH_11`"]
+            #[doc = "Checks if the value of the field is `VCC_VSS_2`"]
             #[inline(always)]
-            pub fn is_inch_11(&self) -> bool {
-                **self == INCH_A::INCH_11
+            pub fn is_vcc_vss_2(&self) -> bool {
+                **self == INCH_A::VCC_VSS_2
             }
-            #[doc = "Checks if the value of the field is `INCH_12`"]
+            #[doc = "Checks if the value of the field is `A12`"]
             #[inline(always)]
-            pub fn is_inch_12(&self) -> bool {
-                **self == INCH_A::INCH_12
-            }
-            #[doc = "Checks if the value of the field is `INCH_13`"]
-            #[inline(always)]
-            pub fn is_inch_13(&self) -> bool {
-                **self == INCH_A::INCH_13
-            }
-            #[doc = "Checks if the value of the field is `INCH_14`"]
-            #[inline(always)]
-            pub fn is_inch_14(&self) -> bool {
-                **self == INCH_A::INCH_14
-            }
-            #[doc = "Checks if the value of the field is `INCH_15`"]
-            #[inline(always)]
-            pub fn is_inch_15(&self) -> bool {
-                **self == INCH_A::INCH_15
+            pub fn is_a12(&self) -> bool {
+                **self == INCH_A::A12
             }
         }
         impl core::ops::Deref for INCH_R {
@@ -10797,91 +11105,76 @@ pub mod adc10 {
             #[doc = r"Writes `variant` to the field"]
             #[inline(always)]
             pub fn variant(self, variant: INCH_A) -> &'a mut W {
-                self.bits(variant.into())
+                unsafe { self.bits(variant.into()) }
             }
-            #[doc = "Selects Channel 0"]
+            #[doc = "A0"]
             #[inline(always)]
-            pub fn inch_0(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_0)
+            pub fn a0(self) -> &'a mut W {
+                self.variant(INCH_A::A0)
             }
-            #[doc = "Selects Channel 1"]
+            #[doc = "A1"]
             #[inline(always)]
-            pub fn inch_1(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_1)
+            pub fn a1(self) -> &'a mut W {
+                self.variant(INCH_A::A1)
             }
-            #[doc = "Selects Channel 2"]
+            #[doc = "A2"]
             #[inline(always)]
-            pub fn inch_2(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_2)
+            pub fn a2(self) -> &'a mut W {
+                self.variant(INCH_A::A2)
             }
-            #[doc = "Selects Channel 3"]
+            #[doc = "A3"]
             #[inline(always)]
-            pub fn inch_3(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_3)
+            pub fn a3(self) -> &'a mut W {
+                self.variant(INCH_A::A3)
             }
-            #[doc = "Selects Channel 4"]
+            #[doc = "A4"]
             #[inline(always)]
-            pub fn inch_4(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_4)
+            pub fn a4(self) -> &'a mut W {
+                self.variant(INCH_A::A4)
             }
-            #[doc = "Selects Channel 5"]
+            #[doc = "A5"]
             #[inline(always)]
-            pub fn inch_5(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_5)
+            pub fn a5(self) -> &'a mut W {
+                self.variant(INCH_A::A5)
             }
-            #[doc = "Selects Channel 6"]
+            #[doc = "A6"]
             #[inline(always)]
-            pub fn inch_6(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_6)
+            pub fn a6(self) -> &'a mut W {
+                self.variant(INCH_A::A6)
             }
-            #[doc = "Selects Channel 7"]
+            #[doc = "A7"]
             #[inline(always)]
-            pub fn inch_7(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_7)
+            pub fn a7(self) -> &'a mut W {
+                self.variant(INCH_A::A7)
             }
-            #[doc = "Selects Channel 8"]
+            #[doc = "VeREF+"]
             #[inline(always)]
-            pub fn inch_8(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_8)
+            pub fn veref_p(self) -> &'a mut W {
+                self.variant(INCH_A::VEREF_P)
             }
-            #[doc = "Selects Channel 9"]
+            #[doc = "VREF-/VeREF-"]
             #[inline(always)]
-            pub fn inch_9(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_9)
+            pub fn vref_veref_n(self) -> &'a mut W {
+                self.variant(INCH_A::VREF_VEREF_N)
             }
-            #[doc = "Selects Channel 10"]
+            #[doc = "Temperature sensor"]
             #[inline(always)]
-            pub fn inch_10(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_10)
+            pub fn temp(self) -> &'a mut W {
+                self.variant(INCH_A::TEMP)
             }
-            #[doc = "Selects Channel 11"]
+            #[doc = "(VCC - VSS) / 2"]
             #[inline(always)]
-            pub fn inch_11(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_11)
+            pub fn vcc_vss_2(self) -> &'a mut W {
+                self.variant(INCH_A::VCC_VSS_2)
             }
-            #[doc = "Selects Channel 12"]
+            #[doc = "A15"]
             #[inline(always)]
-            pub fn inch_12(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_12)
-            }
-            #[doc = "Selects Channel 13"]
-            #[inline(always)]
-            pub fn inch_13(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_13)
-            }
-            #[doc = "Selects Channel 14"]
-            #[inline(always)]
-            pub fn inch_14(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_14)
-            }
-            #[doc = "Selects Channel 15"]
-            #[inline(always)]
-            pub fn inch_15(self) -> &'a mut W {
-                self.variant(INCH_A::INCH_15)
+            pub fn a12(self) -> &'a mut W {
+                self.variant(INCH_A::A12)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
-            pub fn bits(self, value: u8) -> &'a mut W {
+            pub unsafe fn bits(self, value: u8) -> &'a mut W {
                 self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u16 & 0x0f) << 12);
                 self.w
             }
@@ -17043,14 +17336,14 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum MC_A {
-            #[doc = "0: Timer A mode control: 0 - Stop"]
-            MC_0 = 0,
-            #[doc = "1: Timer A mode control: 1 - Up to CCR0"]
-            MC_1 = 1,
-            #[doc = "2: Timer A mode control: 2 - Continous up"]
-            MC_2 = 2,
-            #[doc = "3: Timer A mode control: 3 - Up/Down"]
-            MC_3 = 3,
+            #[doc = "0: Stop mode: the timer is halted"]
+            STOP = 0,
+            #[doc = "1: Up mode: the timer counts up to TACCR0"]
+            UP = 1,
+            #[doc = "2: Continous mode: the timer counts up to 0xFFFF"]
+            CONTINUOUS = 2,
+            #[doc = "3: Up/down mode: the timer counts up to TACCR0 then down to 0x0000"]
+            UP_DOWN = 3,
         }
         impl From<MC_A> for u8 {
             #[inline(always)]
@@ -17068,32 +17361,32 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> MC_A {
                 match self.bits {
-                    0 => MC_A::MC_0,
-                    1 => MC_A::MC_1,
-                    2 => MC_A::MC_2,
-                    3 => MC_A::MC_3,
+                    0 => MC_A::STOP,
+                    1 => MC_A::UP,
+                    2 => MC_A::CONTINUOUS,
+                    3 => MC_A::UP_DOWN,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `MC_0`"]
+            #[doc = "Checks if the value of the field is `STOP`"]
             #[inline(always)]
-            pub fn is_mc_0(&self) -> bool {
-                **self == MC_A::MC_0
+            pub fn is_stop(&self) -> bool {
+                **self == MC_A::STOP
             }
-            #[doc = "Checks if the value of the field is `MC_1`"]
+            #[doc = "Checks if the value of the field is `UP`"]
             #[inline(always)]
-            pub fn is_mc_1(&self) -> bool {
-                **self == MC_A::MC_1
+            pub fn is_up(&self) -> bool {
+                **self == MC_A::UP
             }
-            #[doc = "Checks if the value of the field is `MC_2`"]
+            #[doc = "Checks if the value of the field is `CONTINUOUS`"]
             #[inline(always)]
-            pub fn is_mc_2(&self) -> bool {
-                **self == MC_A::MC_2
+            pub fn is_continuous(&self) -> bool {
+                **self == MC_A::CONTINUOUS
             }
-            #[doc = "Checks if the value of the field is `MC_3`"]
+            #[doc = "Checks if the value of the field is `UP_DOWN`"]
             #[inline(always)]
-            pub fn is_mc_3(&self) -> bool {
-                **self == MC_A::MC_3
+            pub fn is_up_down(&self) -> bool {
+                **self == MC_A::UP_DOWN
             }
         }
         impl core::ops::Deref for MC_R {
@@ -17113,25 +17406,25 @@ pub mod timer_a2 {
             pub fn variant(self, variant: MC_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "Timer A mode control: 0 - Stop"]
+            #[doc = "Stop mode: the timer is halted"]
             #[inline(always)]
-            pub fn mc_0(self) -> &'a mut W {
-                self.variant(MC_A::MC_0)
+            pub fn stop(self) -> &'a mut W {
+                self.variant(MC_A::STOP)
             }
-            #[doc = "Timer A mode control: 1 - Up to CCR0"]
+            #[doc = "Up mode: the timer counts up to TACCR0"]
             #[inline(always)]
-            pub fn mc_1(self) -> &'a mut W {
-                self.variant(MC_A::MC_1)
+            pub fn up(self) -> &'a mut W {
+                self.variant(MC_A::UP)
             }
-            #[doc = "Timer A mode control: 2 - Continous up"]
+            #[doc = "Continous mode: the timer counts up to 0xFFFF"]
             #[inline(always)]
-            pub fn mc_2(self) -> &'a mut W {
-                self.variant(MC_A::MC_2)
+            pub fn continuous(self) -> &'a mut W {
+                self.variant(MC_A::CONTINUOUS)
             }
-            #[doc = "Timer A mode control: 3 - Up/Down"]
+            #[doc = "Up/down mode: the timer counts up to TACCR0 then down to 0x0000"]
             #[inline(always)]
-            pub fn mc_3(self) -> &'a mut W {
-                self.variant(MC_A::MC_3)
+            pub fn up_down(self) -> &'a mut W {
+                self.variant(MC_A::UP_DOWN)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -17144,14 +17437,14 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum ID_A {
-            #[doc = "0: Timer A input divider: 0 - /1"]
-            ID_0 = 0,
-            #[doc = "1: Timer A input divider: 1 - /2"]
-            ID_1 = 1,
-            #[doc = "2: Timer A input divider: 2 - /4"]
-            ID_2 = 2,
-            #[doc = "3: Timer A input divider: 3 - /8"]
-            ID_3 = 3,
+            #[doc = "0: /1"]
+            DIV_1 = 0,
+            #[doc = "1: /2"]
+            DIV_2 = 1,
+            #[doc = "2: /4"]
+            DIV_4 = 2,
+            #[doc = "3: /8"]
+            DIV_8 = 3,
         }
         impl From<ID_A> for u8 {
             #[inline(always)]
@@ -17169,32 +17462,32 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> ID_A {
                 match self.bits {
-                    0 => ID_A::ID_0,
-                    1 => ID_A::ID_1,
-                    2 => ID_A::ID_2,
-                    3 => ID_A::ID_3,
+                    0 => ID_A::DIV_1,
+                    1 => ID_A::DIV_2,
+                    2 => ID_A::DIV_4,
+                    3 => ID_A::DIV_8,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `ID_0`"]
+            #[doc = "Checks if the value of the field is `DIV_1`"]
             #[inline(always)]
-            pub fn is_id_0(&self) -> bool {
-                **self == ID_A::ID_0
+            pub fn is_div_1(&self) -> bool {
+                **self == ID_A::DIV_1
             }
-            #[doc = "Checks if the value of the field is `ID_1`"]
+            #[doc = "Checks if the value of the field is `DIV_2`"]
             #[inline(always)]
-            pub fn is_id_1(&self) -> bool {
-                **self == ID_A::ID_1
+            pub fn is_div_2(&self) -> bool {
+                **self == ID_A::DIV_2
             }
-            #[doc = "Checks if the value of the field is `ID_2`"]
+            #[doc = "Checks if the value of the field is `DIV_4`"]
             #[inline(always)]
-            pub fn is_id_2(&self) -> bool {
-                **self == ID_A::ID_2
+            pub fn is_div_4(&self) -> bool {
+                **self == ID_A::DIV_4
             }
-            #[doc = "Checks if the value of the field is `ID_3`"]
+            #[doc = "Checks if the value of the field is `DIV_8`"]
             #[inline(always)]
-            pub fn is_id_3(&self) -> bool {
-                **self == ID_A::ID_3
+            pub fn is_div_8(&self) -> bool {
+                **self == ID_A::DIV_8
             }
         }
         impl core::ops::Deref for ID_R {
@@ -17214,25 +17507,25 @@ pub mod timer_a2 {
             pub fn variant(self, variant: ID_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "Timer A input divider: 0 - /1"]
+            #[doc = "/1"]
             #[inline(always)]
-            pub fn id_0(self) -> &'a mut W {
-                self.variant(ID_A::ID_0)
+            pub fn div_1(self) -> &'a mut W {
+                self.variant(ID_A::DIV_1)
             }
-            #[doc = "Timer A input divider: 1 - /2"]
+            #[doc = "/2"]
             #[inline(always)]
-            pub fn id_1(self) -> &'a mut W {
-                self.variant(ID_A::ID_1)
+            pub fn div_2(self) -> &'a mut W {
+                self.variant(ID_A::DIV_2)
             }
-            #[doc = "Timer A input divider: 2 - /4"]
+            #[doc = "/4"]
             #[inline(always)]
-            pub fn id_2(self) -> &'a mut W {
-                self.variant(ID_A::ID_2)
+            pub fn div_4(self) -> &'a mut W {
+                self.variant(ID_A::DIV_4)
             }
-            #[doc = "Timer A input divider: 3 - /8"]
+            #[doc = "/8"]
             #[inline(always)]
-            pub fn id_3(self) -> &'a mut W {
-                self.variant(ID_A::ID_3)
+            pub fn div_8(self) -> &'a mut W {
+                self.variant(ID_A::DIV_8)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -17245,14 +17538,14 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum TASSEL_A {
-            #[doc = "0: Timer A clock source select: 0 - TACLK"]
-            TASSEL_0 = 0,
-            #[doc = "1: Timer A clock source select: 1 - ACLK"]
-            TASSEL_1 = 1,
-            #[doc = "2: Timer A clock source select: 2 - SMCLK"]
-            TASSEL_2 = 2,
-            #[doc = "3: Timer A clock source select: 3 - INCLK"]
-            TASSEL_3 = 3,
+            #[doc = "0: TACLK"]
+            TACLK = 0,
+            #[doc = "1: ACLK"]
+            ACLK = 1,
+            #[doc = "2: SMCLK"]
+            SMCLK = 2,
+            #[doc = "3: INCLK (device specific, often assigned to the inverted TBCLK)"]
+            INCLK = 3,
         }
         impl From<TASSEL_A> for u8 {
             #[inline(always)]
@@ -17270,32 +17563,32 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> TASSEL_A {
                 match self.bits {
-                    0 => TASSEL_A::TASSEL_0,
-                    1 => TASSEL_A::TASSEL_1,
-                    2 => TASSEL_A::TASSEL_2,
-                    3 => TASSEL_A::TASSEL_3,
+                    0 => TASSEL_A::TACLK,
+                    1 => TASSEL_A::ACLK,
+                    2 => TASSEL_A::SMCLK,
+                    3 => TASSEL_A::INCLK,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `TASSEL_0`"]
+            #[doc = "Checks if the value of the field is `TACLK`"]
             #[inline(always)]
-            pub fn is_tassel_0(&self) -> bool {
-                **self == TASSEL_A::TASSEL_0
+            pub fn is_taclk(&self) -> bool {
+                **self == TASSEL_A::TACLK
             }
-            #[doc = "Checks if the value of the field is `TASSEL_1`"]
+            #[doc = "Checks if the value of the field is `ACLK`"]
             #[inline(always)]
-            pub fn is_tassel_1(&self) -> bool {
-                **self == TASSEL_A::TASSEL_1
+            pub fn is_aclk(&self) -> bool {
+                **self == TASSEL_A::ACLK
             }
-            #[doc = "Checks if the value of the field is `TASSEL_2`"]
+            #[doc = "Checks if the value of the field is `SMCLK`"]
             #[inline(always)]
-            pub fn is_tassel_2(&self) -> bool {
-                **self == TASSEL_A::TASSEL_2
+            pub fn is_smclk(&self) -> bool {
+                **self == TASSEL_A::SMCLK
             }
-            #[doc = "Checks if the value of the field is `TASSEL_3`"]
+            #[doc = "Checks if the value of the field is `INCLK`"]
             #[inline(always)]
-            pub fn is_tassel_3(&self) -> bool {
-                **self == TASSEL_A::TASSEL_3
+            pub fn is_inclk(&self) -> bool {
+                **self == TASSEL_A::INCLK
             }
         }
         impl core::ops::Deref for TASSEL_R {
@@ -17315,25 +17608,25 @@ pub mod timer_a2 {
             pub fn variant(self, variant: TASSEL_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "Timer A clock source select: 0 - TACLK"]
+            #[doc = "TACLK"]
             #[inline(always)]
-            pub fn tassel_0(self) -> &'a mut W {
-                self.variant(TASSEL_A::TASSEL_0)
+            pub fn taclk(self) -> &'a mut W {
+                self.variant(TASSEL_A::TACLK)
             }
-            #[doc = "Timer A clock source select: 1 - ACLK"]
+            #[doc = "ACLK"]
             #[inline(always)]
-            pub fn tassel_1(self) -> &'a mut W {
-                self.variant(TASSEL_A::TASSEL_1)
+            pub fn aclk(self) -> &'a mut W {
+                self.variant(TASSEL_A::ACLK)
             }
-            #[doc = "Timer A clock source select: 2 - SMCLK"]
+            #[doc = "SMCLK"]
             #[inline(always)]
-            pub fn tassel_2(self) -> &'a mut W {
-                self.variant(TASSEL_A::TASSEL_2)
+            pub fn smclk(self) -> &'a mut W {
+                self.variant(TASSEL_A::SMCLK)
             }
-            #[doc = "Timer A clock source select: 3 - INCLK"]
+            #[doc = "INCLK (device specific, often assigned to the inverted TBCLK)"]
             #[inline(always)]
-            pub fn tassel_3(self) -> &'a mut W {
-                self.variant(TASSEL_A::TASSEL_3)
+            pub fn inclk(self) -> &'a mut W {
+                self.variant(TASSEL_A::INCLK)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -17657,22 +17950,22 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum OUTMOD_A {
-            #[doc = "0: PWM output mode: 0 - output only"]
-            OUTMOD_0 = 0,
-            #[doc = "1: PWM output mode: 1 - set"]
-            OUTMOD_1 = 1,
-            #[doc = "2: PWM output mode: 2 - PWM toggle/reset"]
-            OUTMOD_2 = 2,
-            #[doc = "3: PWM output mode: 3 - PWM set/reset"]
-            OUTMOD_3 = 3,
-            #[doc = "4: PWM output mode: 4 - toggle"]
-            OUTMOD_4 = 4,
-            #[doc = "5: PWM output mode: 5 - Reset"]
-            OUTMOD_5 = 5,
-            #[doc = "6: PWM output mode: 6 - PWM toggle/set"]
-            OUTMOD_6 = 6,
-            #[doc = "7: PWM output mode: 7 - PWM reset/set"]
-            OUTMOD_7 = 7,
+            #[doc = "0: OUT bit value"]
+            OUT = 0,
+            #[doc = "1: Set"]
+            SET = 1,
+            #[doc = "2: Toggle/reset"]
+            TOGGLE_RESET = 2,
+            #[doc = "3: Set/reset"]
+            SET_RESET = 3,
+            #[doc = "4: Toggle"]
+            TOGGLE = 4,
+            #[doc = "5: Reset"]
+            RESET = 5,
+            #[doc = "6: Toggle/set"]
+            TOGGLE_SET = 6,
+            #[doc = "7: Reset/set"]
+            RESET_SET = 7,
         }
         impl From<OUTMOD_A> for u8 {
             #[inline(always)]
@@ -17690,56 +17983,56 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> OUTMOD_A {
                 match self.bits {
-                    0 => OUTMOD_A::OUTMOD_0,
-                    1 => OUTMOD_A::OUTMOD_1,
-                    2 => OUTMOD_A::OUTMOD_2,
-                    3 => OUTMOD_A::OUTMOD_3,
-                    4 => OUTMOD_A::OUTMOD_4,
-                    5 => OUTMOD_A::OUTMOD_5,
-                    6 => OUTMOD_A::OUTMOD_6,
-                    7 => OUTMOD_A::OUTMOD_7,
+                    0 => OUTMOD_A::OUT,
+                    1 => OUTMOD_A::SET,
+                    2 => OUTMOD_A::TOGGLE_RESET,
+                    3 => OUTMOD_A::SET_RESET,
+                    4 => OUTMOD_A::TOGGLE,
+                    5 => OUTMOD_A::RESET,
+                    6 => OUTMOD_A::TOGGLE_SET,
+                    7 => OUTMOD_A::RESET_SET,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_0`"]
+            #[doc = "Checks if the value of the field is `OUT`"]
             #[inline(always)]
-            pub fn is_outmod_0(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_0
+            pub fn is_out(&self) -> bool {
+                **self == OUTMOD_A::OUT
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_1`"]
+            #[doc = "Checks if the value of the field is `SET`"]
             #[inline(always)]
-            pub fn is_outmod_1(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_1
+            pub fn is_set(&self) -> bool {
+                **self == OUTMOD_A::SET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_2`"]
+            #[doc = "Checks if the value of the field is `TOGGLE_RESET`"]
             #[inline(always)]
-            pub fn is_outmod_2(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_2
+            pub fn is_toggle_reset(&self) -> bool {
+                **self == OUTMOD_A::TOGGLE_RESET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_3`"]
+            #[doc = "Checks if the value of the field is `SET_RESET`"]
             #[inline(always)]
-            pub fn is_outmod_3(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_3
+            pub fn is_set_reset(&self) -> bool {
+                **self == OUTMOD_A::SET_RESET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_4`"]
+            #[doc = "Checks if the value of the field is `TOGGLE`"]
             #[inline(always)]
-            pub fn is_outmod_4(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_4
+            pub fn is_toggle(&self) -> bool {
+                **self == OUTMOD_A::TOGGLE
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_5`"]
+            #[doc = "Checks if the value of the field is `RESET`"]
             #[inline(always)]
-            pub fn is_outmod_5(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_5
+            pub fn is_reset(&self) -> bool {
+                **self == OUTMOD_A::RESET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_6`"]
+            #[doc = "Checks if the value of the field is `TOGGLE_SET`"]
             #[inline(always)]
-            pub fn is_outmod_6(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_6
+            pub fn is_toggle_set(&self) -> bool {
+                **self == OUTMOD_A::TOGGLE_SET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_7`"]
+            #[doc = "Checks if the value of the field is `RESET_SET`"]
             #[inline(always)]
-            pub fn is_outmod_7(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_7
+            pub fn is_reset_set(&self) -> bool {
+                **self == OUTMOD_A::RESET_SET
             }
         }
         impl core::ops::Deref for OUTMOD_R {
@@ -17759,45 +18052,45 @@ pub mod timer_a2 {
             pub fn variant(self, variant: OUTMOD_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "PWM output mode: 0 - output only"]
+            #[doc = "OUT bit value"]
             #[inline(always)]
-            pub fn outmod_0(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_0)
+            pub fn out(self) -> &'a mut W {
+                self.variant(OUTMOD_A::OUT)
             }
-            #[doc = "PWM output mode: 1 - set"]
+            #[doc = "Set"]
             #[inline(always)]
-            pub fn outmod_1(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_1)
+            pub fn set(self) -> &'a mut W {
+                self.variant(OUTMOD_A::SET)
             }
-            #[doc = "PWM output mode: 2 - PWM toggle/reset"]
+            #[doc = "Toggle/reset"]
             #[inline(always)]
-            pub fn outmod_2(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_2)
+            pub fn toggle_reset(self) -> &'a mut W {
+                self.variant(OUTMOD_A::TOGGLE_RESET)
             }
-            #[doc = "PWM output mode: 3 - PWM set/reset"]
+            #[doc = "Set/reset"]
             #[inline(always)]
-            pub fn outmod_3(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_3)
+            pub fn set_reset(self) -> &'a mut W {
+                self.variant(OUTMOD_A::SET_RESET)
             }
-            #[doc = "PWM output mode: 4 - toggle"]
+            #[doc = "Toggle"]
             #[inline(always)]
-            pub fn outmod_4(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_4)
+            pub fn toggle(self) -> &'a mut W {
+                self.variant(OUTMOD_A::TOGGLE)
             }
-            #[doc = "PWM output mode: 5 - Reset"]
+            #[doc = "Reset"]
             #[inline(always)]
-            pub fn outmod_5(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_5)
+            pub fn reset(self) -> &'a mut W {
+                self.variant(OUTMOD_A::RESET)
             }
-            #[doc = "PWM output mode: 6 - PWM toggle/set"]
+            #[doc = "Toggle/set"]
             #[inline(always)]
-            pub fn outmod_6(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_6)
+            pub fn toggle_set(self) -> &'a mut W {
+                self.variant(OUTMOD_A::TOGGLE_SET)
             }
-            #[doc = "PWM output mode: 7 - PWM reset/set"]
+            #[doc = "Reset/set"]
             #[inline(always)]
-            pub fn outmod_7(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_7)
+            pub fn reset_set(self) -> &'a mut W {
+                self.variant(OUTMOD_A::RESET_SET)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -17918,14 +18211,14 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum CCIS_A {
-            #[doc = "0: Capture input select: 0 - CCIxA"]
-            CCIS_0 = 0,
-            #[doc = "1: Capture input select: 1 - CCIxB"]
-            CCIS_1 = 1,
-            #[doc = "2: Capture input select: 2 - GND"]
-            CCIS_2 = 2,
-            #[doc = "3: Capture input select: 3 - Vcc"]
-            CCIS_3 = 3,
+            #[doc = "0: CCI0A"]
+            CCI0A = 0,
+            #[doc = "1: CCI0B"]
+            CCI0B = 1,
+            #[doc = "2: GND"]
+            GND = 2,
+            #[doc = "3: VCC"]
+            VCC = 3,
         }
         impl From<CCIS_A> for u8 {
             #[inline(always)]
@@ -17943,32 +18236,32 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> CCIS_A {
                 match self.bits {
-                    0 => CCIS_A::CCIS_0,
-                    1 => CCIS_A::CCIS_1,
-                    2 => CCIS_A::CCIS_2,
-                    3 => CCIS_A::CCIS_3,
+                    0 => CCIS_A::CCI0A,
+                    1 => CCIS_A::CCI0B,
+                    2 => CCIS_A::GND,
+                    3 => CCIS_A::VCC,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `CCIS_0`"]
+            #[doc = "Checks if the value of the field is `CCI0A`"]
             #[inline(always)]
-            pub fn is_ccis_0(&self) -> bool {
-                **self == CCIS_A::CCIS_0
+            pub fn is_cci0a(&self) -> bool {
+                **self == CCIS_A::CCI0A
             }
-            #[doc = "Checks if the value of the field is `CCIS_1`"]
+            #[doc = "Checks if the value of the field is `CCI0B`"]
             #[inline(always)]
-            pub fn is_ccis_1(&self) -> bool {
-                **self == CCIS_A::CCIS_1
+            pub fn is_cci0b(&self) -> bool {
+                **self == CCIS_A::CCI0B
             }
-            #[doc = "Checks if the value of the field is `CCIS_2`"]
+            #[doc = "Checks if the value of the field is `GND`"]
             #[inline(always)]
-            pub fn is_ccis_2(&self) -> bool {
-                **self == CCIS_A::CCIS_2
+            pub fn is_gnd(&self) -> bool {
+                **self == CCIS_A::GND
             }
-            #[doc = "Checks if the value of the field is `CCIS_3`"]
+            #[doc = "Checks if the value of the field is `VCC`"]
             #[inline(always)]
-            pub fn is_ccis_3(&self) -> bool {
-                **self == CCIS_A::CCIS_3
+            pub fn is_vcc(&self) -> bool {
+                **self == CCIS_A::VCC
             }
         }
         impl core::ops::Deref for CCIS_R {
@@ -17988,25 +18281,25 @@ pub mod timer_a2 {
             pub fn variant(self, variant: CCIS_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "Capture input select: 0 - CCIxA"]
+            #[doc = "CCI0A"]
             #[inline(always)]
-            pub fn ccis_0(self) -> &'a mut W {
-                self.variant(CCIS_A::CCIS_0)
+            pub fn cci0a(self) -> &'a mut W {
+                self.variant(CCIS_A::CCI0A)
             }
-            #[doc = "Capture input select: 1 - CCIxB"]
+            #[doc = "CCI0B"]
             #[inline(always)]
-            pub fn ccis_1(self) -> &'a mut W {
-                self.variant(CCIS_A::CCIS_1)
+            pub fn cci0b(self) -> &'a mut W {
+                self.variant(CCIS_A::CCI0B)
             }
-            #[doc = "Capture input select: 2 - GND"]
+            #[doc = "GND"]
             #[inline(always)]
-            pub fn ccis_2(self) -> &'a mut W {
-                self.variant(CCIS_A::CCIS_2)
+            pub fn gnd(self) -> &'a mut W {
+                self.variant(CCIS_A::GND)
             }
-            #[doc = "Capture input select: 3 - Vcc"]
+            #[doc = "VCC"]
             #[inline(always)]
-            pub fn ccis_3(self) -> &'a mut W {
-                self.variant(CCIS_A::CCIS_3)
+            pub fn vcc(self) -> &'a mut W {
+                self.variant(CCIS_A::VCC)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -18019,14 +18312,14 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum CM_A {
-            #[doc = "0: Capture mode: 0 - disabled"]
-            CM_0 = 0,
-            #[doc = "1: Capture mode: 1 - pos. edge"]
-            CM_1 = 1,
-            #[doc = "2: Capture mode: 1 - neg. edge"]
-            CM_2 = 2,
-            #[doc = "3: Capture mode: 1 - both edges"]
-            CM_3 = 3,
+            #[doc = "0: No capture"]
+            NONE = 0,
+            #[doc = "1: Capture on rising edge"]
+            RISING = 1,
+            #[doc = "2: Capture on falling edge"]
+            FALLING = 2,
+            #[doc = "3: Capture on both rising and falling edges"]
+            BOTH = 3,
         }
         impl From<CM_A> for u8 {
             #[inline(always)]
@@ -18044,32 +18337,32 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> CM_A {
                 match self.bits {
-                    0 => CM_A::CM_0,
-                    1 => CM_A::CM_1,
-                    2 => CM_A::CM_2,
-                    3 => CM_A::CM_3,
+                    0 => CM_A::NONE,
+                    1 => CM_A::RISING,
+                    2 => CM_A::FALLING,
+                    3 => CM_A::BOTH,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `CM_0`"]
+            #[doc = "Checks if the value of the field is `NONE`"]
             #[inline(always)]
-            pub fn is_cm_0(&self) -> bool {
-                **self == CM_A::CM_0
+            pub fn is_none(&self) -> bool {
+                **self == CM_A::NONE
             }
-            #[doc = "Checks if the value of the field is `CM_1`"]
+            #[doc = "Checks if the value of the field is `RISING`"]
             #[inline(always)]
-            pub fn is_cm_1(&self) -> bool {
-                **self == CM_A::CM_1
+            pub fn is_rising(&self) -> bool {
+                **self == CM_A::RISING
             }
-            #[doc = "Checks if the value of the field is `CM_2`"]
+            #[doc = "Checks if the value of the field is `FALLING`"]
             #[inline(always)]
-            pub fn is_cm_2(&self) -> bool {
-                **self == CM_A::CM_2
+            pub fn is_falling(&self) -> bool {
+                **self == CM_A::FALLING
             }
-            #[doc = "Checks if the value of the field is `CM_3`"]
+            #[doc = "Checks if the value of the field is `BOTH`"]
             #[inline(always)]
-            pub fn is_cm_3(&self) -> bool {
-                **self == CM_A::CM_3
+            pub fn is_both(&self) -> bool {
+                **self == CM_A::BOTH
             }
         }
         impl core::ops::Deref for CM_R {
@@ -18089,25 +18382,25 @@ pub mod timer_a2 {
             pub fn variant(self, variant: CM_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "Capture mode: 0 - disabled"]
+            #[doc = "No capture"]
             #[inline(always)]
-            pub fn cm_0(self) -> &'a mut W {
-                self.variant(CM_A::CM_0)
+            pub fn none(self) -> &'a mut W {
+                self.variant(CM_A::NONE)
             }
-            #[doc = "Capture mode: 1 - pos. edge"]
+            #[doc = "Capture on rising edge"]
             #[inline(always)]
-            pub fn cm_1(self) -> &'a mut W {
-                self.variant(CM_A::CM_1)
+            pub fn rising(self) -> &'a mut W {
+                self.variant(CM_A::RISING)
             }
-            #[doc = "Capture mode: 1 - neg. edge"]
+            #[doc = "Capture on falling edge"]
             #[inline(always)]
-            pub fn cm_2(self) -> &'a mut W {
-                self.variant(CM_A::CM_2)
+            pub fn falling(self) -> &'a mut W {
+                self.variant(CM_A::FALLING)
             }
-            #[doc = "Capture mode: 1 - both edges"]
+            #[doc = "Capture on both rising and falling edges"]
             #[inline(always)]
-            pub fn cm_3(self) -> &'a mut W {
-                self.variant(CM_A::CM_3)
+            pub fn both(self) -> &'a mut W {
+                self.variant(CM_A::BOTH)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -18481,22 +18774,22 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum OUTMOD_A {
-            #[doc = "0: PWM output mode: 0 - output only"]
-            OUTMOD_0 = 0,
-            #[doc = "1: PWM output mode: 1 - set"]
-            OUTMOD_1 = 1,
-            #[doc = "2: PWM output mode: 2 - PWM toggle/reset"]
-            OUTMOD_2 = 2,
-            #[doc = "3: PWM output mode: 3 - PWM set/reset"]
-            OUTMOD_3 = 3,
-            #[doc = "4: PWM output mode: 4 - toggle"]
-            OUTMOD_4 = 4,
-            #[doc = "5: PWM output mode: 5 - Reset"]
-            OUTMOD_5 = 5,
-            #[doc = "6: PWM output mode: 6 - PWM toggle/set"]
-            OUTMOD_6 = 6,
-            #[doc = "7: PWM output mode: 7 - PWM reset/set"]
-            OUTMOD_7 = 7,
+            #[doc = "0: OUT bit value"]
+            OUT = 0,
+            #[doc = "1: Set"]
+            SET = 1,
+            #[doc = "2: Toggle/reset"]
+            TOGGLE_RESET = 2,
+            #[doc = "3: Set/reset"]
+            SET_RESET = 3,
+            #[doc = "4: Toggle"]
+            TOGGLE = 4,
+            #[doc = "5: Reset"]
+            RESET = 5,
+            #[doc = "6: Toggle/set"]
+            TOGGLE_SET = 6,
+            #[doc = "7: Reset/set"]
+            RESET_SET = 7,
         }
         impl From<OUTMOD_A> for u8 {
             #[inline(always)]
@@ -18514,56 +18807,56 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> OUTMOD_A {
                 match self.bits {
-                    0 => OUTMOD_A::OUTMOD_0,
-                    1 => OUTMOD_A::OUTMOD_1,
-                    2 => OUTMOD_A::OUTMOD_2,
-                    3 => OUTMOD_A::OUTMOD_3,
-                    4 => OUTMOD_A::OUTMOD_4,
-                    5 => OUTMOD_A::OUTMOD_5,
-                    6 => OUTMOD_A::OUTMOD_6,
-                    7 => OUTMOD_A::OUTMOD_7,
+                    0 => OUTMOD_A::OUT,
+                    1 => OUTMOD_A::SET,
+                    2 => OUTMOD_A::TOGGLE_RESET,
+                    3 => OUTMOD_A::SET_RESET,
+                    4 => OUTMOD_A::TOGGLE,
+                    5 => OUTMOD_A::RESET,
+                    6 => OUTMOD_A::TOGGLE_SET,
+                    7 => OUTMOD_A::RESET_SET,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_0`"]
+            #[doc = "Checks if the value of the field is `OUT`"]
             #[inline(always)]
-            pub fn is_outmod_0(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_0
+            pub fn is_out(&self) -> bool {
+                **self == OUTMOD_A::OUT
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_1`"]
+            #[doc = "Checks if the value of the field is `SET`"]
             #[inline(always)]
-            pub fn is_outmod_1(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_1
+            pub fn is_set(&self) -> bool {
+                **self == OUTMOD_A::SET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_2`"]
+            #[doc = "Checks if the value of the field is `TOGGLE_RESET`"]
             #[inline(always)]
-            pub fn is_outmod_2(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_2
+            pub fn is_toggle_reset(&self) -> bool {
+                **self == OUTMOD_A::TOGGLE_RESET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_3`"]
+            #[doc = "Checks if the value of the field is `SET_RESET`"]
             #[inline(always)]
-            pub fn is_outmod_3(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_3
+            pub fn is_set_reset(&self) -> bool {
+                **self == OUTMOD_A::SET_RESET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_4`"]
+            #[doc = "Checks if the value of the field is `TOGGLE`"]
             #[inline(always)]
-            pub fn is_outmod_4(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_4
+            pub fn is_toggle(&self) -> bool {
+                **self == OUTMOD_A::TOGGLE
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_5`"]
+            #[doc = "Checks if the value of the field is `RESET`"]
             #[inline(always)]
-            pub fn is_outmod_5(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_5
+            pub fn is_reset(&self) -> bool {
+                **self == OUTMOD_A::RESET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_6`"]
+            #[doc = "Checks if the value of the field is `TOGGLE_SET`"]
             #[inline(always)]
-            pub fn is_outmod_6(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_6
+            pub fn is_toggle_set(&self) -> bool {
+                **self == OUTMOD_A::TOGGLE_SET
             }
-            #[doc = "Checks if the value of the field is `OUTMOD_7`"]
+            #[doc = "Checks if the value of the field is `RESET_SET`"]
             #[inline(always)]
-            pub fn is_outmod_7(&self) -> bool {
-                **self == OUTMOD_A::OUTMOD_7
+            pub fn is_reset_set(&self) -> bool {
+                **self == OUTMOD_A::RESET_SET
             }
         }
         impl core::ops::Deref for OUTMOD_R {
@@ -18583,45 +18876,45 @@ pub mod timer_a2 {
             pub fn variant(self, variant: OUTMOD_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "PWM output mode: 0 - output only"]
+            #[doc = "OUT bit value"]
             #[inline(always)]
-            pub fn outmod_0(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_0)
+            pub fn out(self) -> &'a mut W {
+                self.variant(OUTMOD_A::OUT)
             }
-            #[doc = "PWM output mode: 1 - set"]
+            #[doc = "Set"]
             #[inline(always)]
-            pub fn outmod_1(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_1)
+            pub fn set(self) -> &'a mut W {
+                self.variant(OUTMOD_A::SET)
             }
-            #[doc = "PWM output mode: 2 - PWM toggle/reset"]
+            #[doc = "Toggle/reset"]
             #[inline(always)]
-            pub fn outmod_2(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_2)
+            pub fn toggle_reset(self) -> &'a mut W {
+                self.variant(OUTMOD_A::TOGGLE_RESET)
             }
-            #[doc = "PWM output mode: 3 - PWM set/reset"]
+            #[doc = "Set/reset"]
             #[inline(always)]
-            pub fn outmod_3(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_3)
+            pub fn set_reset(self) -> &'a mut W {
+                self.variant(OUTMOD_A::SET_RESET)
             }
-            #[doc = "PWM output mode: 4 - toggle"]
+            #[doc = "Toggle"]
             #[inline(always)]
-            pub fn outmod_4(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_4)
+            pub fn toggle(self) -> &'a mut W {
+                self.variant(OUTMOD_A::TOGGLE)
             }
-            #[doc = "PWM output mode: 5 - Reset"]
+            #[doc = "Reset"]
             #[inline(always)]
-            pub fn outmod_5(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_5)
+            pub fn reset(self) -> &'a mut W {
+                self.variant(OUTMOD_A::RESET)
             }
-            #[doc = "PWM output mode: 6 - PWM toggle/set"]
+            #[doc = "Toggle/set"]
             #[inline(always)]
-            pub fn outmod_6(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_6)
+            pub fn toggle_set(self) -> &'a mut W {
+                self.variant(OUTMOD_A::TOGGLE_SET)
             }
-            #[doc = "PWM output mode: 7 - PWM reset/set"]
+            #[doc = "Reset/set"]
             #[inline(always)]
-            pub fn outmod_7(self) -> &'a mut W {
-                self.variant(OUTMOD_A::OUTMOD_7)
+            pub fn reset_set(self) -> &'a mut W {
+                self.variant(OUTMOD_A::RESET_SET)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -18742,14 +19035,14 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum CCIS_A {
-            #[doc = "0: Capture input select: 0 - CCIxA"]
-            CCIS_0 = 0,
-            #[doc = "1: Capture input select: 1 - CCIxB"]
-            CCIS_1 = 1,
-            #[doc = "2: Capture input select: 2 - GND"]
-            CCIS_2 = 2,
-            #[doc = "3: Capture input select: 3 - Vcc"]
-            CCIS_3 = 3,
+            #[doc = "0: CCI0A"]
+            CCI0A = 0,
+            #[doc = "1: CCI0B"]
+            CCI0B = 1,
+            #[doc = "2: GND"]
+            GND = 2,
+            #[doc = "3: VCC"]
+            VCC = 3,
         }
         impl From<CCIS_A> for u8 {
             #[inline(always)]
@@ -18767,32 +19060,32 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> CCIS_A {
                 match self.bits {
-                    0 => CCIS_A::CCIS_0,
-                    1 => CCIS_A::CCIS_1,
-                    2 => CCIS_A::CCIS_2,
-                    3 => CCIS_A::CCIS_3,
+                    0 => CCIS_A::CCI0A,
+                    1 => CCIS_A::CCI0B,
+                    2 => CCIS_A::GND,
+                    3 => CCIS_A::VCC,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `CCIS_0`"]
+            #[doc = "Checks if the value of the field is `CCI0A`"]
             #[inline(always)]
-            pub fn is_ccis_0(&self) -> bool {
-                **self == CCIS_A::CCIS_0
+            pub fn is_cci0a(&self) -> bool {
+                **self == CCIS_A::CCI0A
             }
-            #[doc = "Checks if the value of the field is `CCIS_1`"]
+            #[doc = "Checks if the value of the field is `CCI0B`"]
             #[inline(always)]
-            pub fn is_ccis_1(&self) -> bool {
-                **self == CCIS_A::CCIS_1
+            pub fn is_cci0b(&self) -> bool {
+                **self == CCIS_A::CCI0B
             }
-            #[doc = "Checks if the value of the field is `CCIS_2`"]
+            #[doc = "Checks if the value of the field is `GND`"]
             #[inline(always)]
-            pub fn is_ccis_2(&self) -> bool {
-                **self == CCIS_A::CCIS_2
+            pub fn is_gnd(&self) -> bool {
+                **self == CCIS_A::GND
             }
-            #[doc = "Checks if the value of the field is `CCIS_3`"]
+            #[doc = "Checks if the value of the field is `VCC`"]
             #[inline(always)]
-            pub fn is_ccis_3(&self) -> bool {
-                **self == CCIS_A::CCIS_3
+            pub fn is_vcc(&self) -> bool {
+                **self == CCIS_A::VCC
             }
         }
         impl core::ops::Deref for CCIS_R {
@@ -18812,25 +19105,25 @@ pub mod timer_a2 {
             pub fn variant(self, variant: CCIS_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "Capture input select: 0 - CCIxA"]
+            #[doc = "CCI0A"]
             #[inline(always)]
-            pub fn ccis_0(self) -> &'a mut W {
-                self.variant(CCIS_A::CCIS_0)
+            pub fn cci0a(self) -> &'a mut W {
+                self.variant(CCIS_A::CCI0A)
             }
-            #[doc = "Capture input select: 1 - CCIxB"]
+            #[doc = "CCI0B"]
             #[inline(always)]
-            pub fn ccis_1(self) -> &'a mut W {
-                self.variant(CCIS_A::CCIS_1)
+            pub fn cci0b(self) -> &'a mut W {
+                self.variant(CCIS_A::CCI0B)
             }
-            #[doc = "Capture input select: 2 - GND"]
+            #[doc = "GND"]
             #[inline(always)]
-            pub fn ccis_2(self) -> &'a mut W {
-                self.variant(CCIS_A::CCIS_2)
+            pub fn gnd(self) -> &'a mut W {
+                self.variant(CCIS_A::GND)
             }
-            #[doc = "Capture input select: 3 - Vcc"]
+            #[doc = "VCC"]
             #[inline(always)]
-            pub fn ccis_3(self) -> &'a mut W {
-                self.variant(CCIS_A::CCIS_3)
+            pub fn vcc(self) -> &'a mut W {
+                self.variant(CCIS_A::VCC)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
@@ -18843,14 +19136,14 @@ pub mod timer_a2 {
         #[derive(Clone, Copy, Debug, PartialEq)]
         #[repr(u8)]
         pub enum CM_A {
-            #[doc = "0: Capture mode: 0 - disabled"]
-            CM_0 = 0,
-            #[doc = "1: Capture mode: 1 - pos. edge"]
-            CM_1 = 1,
-            #[doc = "2: Capture mode: 1 - neg. edge"]
-            CM_2 = 2,
-            #[doc = "3: Capture mode: 1 - both edges"]
-            CM_3 = 3,
+            #[doc = "0: No capture"]
+            NONE = 0,
+            #[doc = "1: Capture on rising edge"]
+            RISING = 1,
+            #[doc = "2: Capture on falling edge"]
+            FALLING = 2,
+            #[doc = "3: Capture on both rising and falling edges"]
+            BOTH = 3,
         }
         impl From<CM_A> for u8 {
             #[inline(always)]
@@ -18868,32 +19161,32 @@ pub mod timer_a2 {
             #[inline(always)]
             pub fn variant(&self) -> CM_A {
                 match self.bits {
-                    0 => CM_A::CM_0,
-                    1 => CM_A::CM_1,
-                    2 => CM_A::CM_2,
-                    3 => CM_A::CM_3,
+                    0 => CM_A::NONE,
+                    1 => CM_A::RISING,
+                    2 => CM_A::FALLING,
+                    3 => CM_A::BOTH,
                     _ => unreachable!(),
                 }
             }
-            #[doc = "Checks if the value of the field is `CM_0`"]
+            #[doc = "Checks if the value of the field is `NONE`"]
             #[inline(always)]
-            pub fn is_cm_0(&self) -> bool {
-                **self == CM_A::CM_0
+            pub fn is_none(&self) -> bool {
+                **self == CM_A::NONE
             }
-            #[doc = "Checks if the value of the field is `CM_1`"]
+            #[doc = "Checks if the value of the field is `RISING`"]
             #[inline(always)]
-            pub fn is_cm_1(&self) -> bool {
-                **self == CM_A::CM_1
+            pub fn is_rising(&self) -> bool {
+                **self == CM_A::RISING
             }
-            #[doc = "Checks if the value of the field is `CM_2`"]
+            #[doc = "Checks if the value of the field is `FALLING`"]
             #[inline(always)]
-            pub fn is_cm_2(&self) -> bool {
-                **self == CM_A::CM_2
+            pub fn is_falling(&self) -> bool {
+                **self == CM_A::FALLING
             }
-            #[doc = "Checks if the value of the field is `CM_3`"]
+            #[doc = "Checks if the value of the field is `BOTH`"]
             #[inline(always)]
-            pub fn is_cm_3(&self) -> bool {
-                **self == CM_A::CM_3
+            pub fn is_both(&self) -> bool {
+                **self == CM_A::BOTH
             }
         }
         impl core::ops::Deref for CM_R {
@@ -18913,25 +19206,25 @@ pub mod timer_a2 {
             pub fn variant(self, variant: CM_A) -> &'a mut W {
                 self.bits(variant.into())
             }
-            #[doc = "Capture mode: 0 - disabled"]
+            #[doc = "No capture"]
             #[inline(always)]
-            pub fn cm_0(self) -> &'a mut W {
-                self.variant(CM_A::CM_0)
+            pub fn none(self) -> &'a mut W {
+                self.variant(CM_A::NONE)
             }
-            #[doc = "Capture mode: 1 - pos. edge"]
+            #[doc = "Capture on rising edge"]
             #[inline(always)]
-            pub fn cm_1(self) -> &'a mut W {
-                self.variant(CM_A::CM_1)
+            pub fn rising(self) -> &'a mut W {
+                self.variant(CM_A::RISING)
             }
-            #[doc = "Capture mode: 1 - neg. edge"]
+            #[doc = "Capture on falling edge"]
             #[inline(always)]
-            pub fn cm_2(self) -> &'a mut W {
-                self.variant(CM_A::CM_2)
+            pub fn falling(self) -> &'a mut W {
+                self.variant(CM_A::FALLING)
             }
-            #[doc = "Capture mode: 1 - both edges"]
+            #[doc = "Capture on both rising and falling edges"]
             #[inline(always)]
-            pub fn cm_3(self) -> &'a mut W {
-                self.variant(CM_A::CM_3)
+            pub fn both(self) -> &'a mut W {
+                self.variant(CM_A::BOTH)
             }
             #[doc = r"Writes raw bits to the field"]
             #[inline(always)]
